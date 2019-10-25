@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>This my new one</title>
+      <style>
+
+body{
+    font-size: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+          
+h1{
+    background-color: coral;
+    color: azure;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+          
+.mainBox{
+    /* ensure box size does not get bigger with borders or padding */
+    box-sizing: border-box;
+    border: 6px solid red;
+    background-color: coral;
+    max-width: 900px; 
+    margin: auto;
+}
+          
+.img-responsive{
+    /* never more that 100% of its container */
+    max-width: 100%;
+    margin:0px;
+}
+
+          /* styles will activate if page window width more than 700px */
+
+@media screen and (min-width: 700px) {
+    body{
+        margin: 20px;
+        padding: 0px;  
+    }
+}
+      
+      
+      </style>
+  </head>
+    <body>
+    <div class="mainBox">
+            <h1>Picture</h1>
+                    <img class="img-responsive" src="images/coral-sized.jpg" alt="An underwater picture of corals"></div>
+        
+    </body>
+</html>

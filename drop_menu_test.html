@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title> Component </title>
+      <style>
+        .container{
+            background-color: rgb(191,218, 227);
+            margin:0px;
+        }
+          
+        .img-responsive{
+            max-width: 100%;
+        }
+          
+     /*--------------- navigation ------------------ */     
+        .nav{
+        list-style: none;
+        margin:0px;
+            padding: 0;
+
+        }
+
+        .nav li{
+            display: inline-block;
+            position: relative;
+        }
+        .nav li a{
+        display:inline-block;
+        padding: 1em;
+        /* font styling goes here */
+        }
+
+        a:link{
+        text-decoration: none;
+        background-color: rgb(150,50, 70);
+        color: rgb(255,255,255);
+
+        }
+
+        a:visited{
+        color: rgb(255,255,255);
+
+        }
+        a:hover{
+        background-color: rgb(200,200,100);
+        color:rgb(50,50,0);
+
+        }
+          .drop-nav{
+              position: absolute;
+              top: 100%;
+              left: 0;
+              background-color: crimson;
+              width:100%;
+              
+          }
+          .inner-nav{
+              list-style: none;
+              margin: 0;
+              padding: 0;
+          }
+          .inner-nav li{
+              display: list-item;
+          }
+          .inner-nav li a{
+              box-sizing: border-box;
+              width:100%;
+          }
+
+      </style>
+    </head>
+    <body>
+        <div class="container">
+<ul class="nav">
+    <li><a href="#erscotts">Erscott's Hole  </a> </li><li><a href="#admiralty"  id="drop-down-button">Admiralty Islands </a>
+    <div class="drop-nav" id="drop-down"> 
+        <ul class="inner-nav">
+            <li><a href="#one"> One </a></li>
+        <li> <a href="#two"> Two </a> </li>
+        <li> <a href="#three"> Three </a> </li>
+        </ul>
+    
+    </div>
+    
+    </li><li><a href="#blinkys">Blinky's Beach</a> </li>
+</ul>
+    </div>
+        <div>
+        <img class="img-responsive" src="images/tongariro_landscape_wide.jpg">
+        </div>
+        
+        <script>
+        // get access to elements     
+        var x=document.getElementById("drop-down");
+        var y=document.getElementById("drop-down-button");
+        console.log(x);
+        // add click event to the link button
+        y.addEventListener("click", myfunction);
+        x.addEventListener("click", myfunction);
+        // set the drop down to be invisible
+        var toggle = false;
+        x.style.display="none"; 
+            function myfunction(){
+                if(!toggle){
+                    x.style.display="block";
+                    toggle = true;
+                }else{
+                    x.style.display="none"; 
+                    toggle = false;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Left nav</title>
+    <style>
+        body{
+            font-size: 100%;
+        }
+        .topBar{
+            box-sizing: border-box;
+            background-color: rgb(0,0,50);
+            height:50px;
+            border: 15px solid green;
+        }
+        .topBar:hover{
+            border: 10px solid green;
+        }
+        .main{
+           box-sizing: border-box;
+            background-color: coral;
+            overflow: hidden;
+        }
+        .charbox{
+            box-sizing: border-box;
+            width:25%;
+            float:left;
+            padding: 5%;
+        }
+        .titlebox{
+            box-sizing: border-box;
+            width:100%;
+            padding: 0.5em;
+            text-align: center;
+            color: white;
+            font-weight: bolder;
+            font-size: 2em;
+            background-color: crimson;
+        }
+        
+        
+        .img-responsive{
+            max-width: 100%;
+            outline: 0px solid green;
+            
+        }
+        
+        .nav{
+            box-sizing: border-box;
+            border:0px solid pink;
+            width: 12.5%;
+            min-width: 100px;
+            position: absolute;
+            top:50%;
+            left:0;
+            transform: translateY(-50%);
+        }
+        
+        .nav ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav ul li a{
+        display: block;
+        box-sizing: border-box;
+        text-decoration: none;
+        padding: 1em 1em;
+        border-bottom: 2px dashed rgba(255,255,255,0.5);
+        }
+        
+        .nav ul li a:link{
+        background-color: rgba(200,0,200,0.0);
+        color: white;  
+        }
+        .nav ul li a:visited{
+        background-color: rgba(200,0,200,0.0);
+        color: white;  
+        }
+        .nav ul li a:hover{
+        border-bottom: 2px solid rgba(255,255,255,1);
+        color: white;  
+        }
+        .myParent{
+            position: relative;
+        }
+      </style>
+      
+    </head>
+    <body>
+        
+<div class="topBar" > </div>
+<div class="topBar" > </div>
+<div class="topBar" > </div>
+<div class="myParent">
+        <div class="nav">
+        <ul>
+        <li><a href="#"> One </a></li>
+        <li><a href="#"> Two </a></li>
+        <li><a href="#"> Three </a></li>
+        
+        </ul>
+    
+    </div>
+<img class="img-responsive" src="images/3by1.jpg"> 
+
+        </div>
+<div class="main">
+    <div class="charbox">
+        <img class="img-responsive" src="images/gamecharacter-01.svg"> 
+        <div class="titlebox"> Alice </div>
+    </div>
+    
+        <div class="charbox">
+        <img class="img-responsive" src="images/gamecharacter-02.svg"> 
+        <div class="titlebox"> Bob </div>
+    </div>
+        <div class="charbox">
+        <img class="img-responsive" src="images/gamecharacter-03.svg"> 
+        <div class="titlebox">Cate </div>
+    </div>
+           <div class="charbox">
+        <img class="img-responsive" src="images/gamecharacter-04.svg">
+        <div class="titlebox"> Dane </div>
+    </div>
+    <!-- -->
+     <div class="charbox">
+        <img class="img-responsive" src="images/gamecharacter-01.svg"> 
+        <div class="titlebox"> Alice </div>
+    </div>
+    
+        <div class="charbox">
+        <img class="img-responsive" src="images/gamecharacter-02.svg"> 
+        <div class="titlebox"> Bob </div>
+    </div>
+        <div class="charbox">
+        <img class="img-responsive" src="images/gamecharacter-03.svg"> 
+        <div class="titlebox">Cate </div>
+    </div>
+           <div class="charbox">
+        <img class="img-responsive" src="images/gamecharacter-04.svg">
+        <div class="titlebox"> Dane </div>
+    </div>
+    
+    
+        
+        
+        </div>
+    
+    </body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>test 2</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300i&display=swap" rel="stylesheet">
+      
+<style>
+body{
+    font-size: 100%;
+    background-color: rgb(226,237,241); 
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ---- header styles ------- */
+h2{
+    text-align: center;
+}
+
+h3{
+    background-color: rgb(90,0,241);
+    color: rgb(255,255,255);
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+}
+/* ---------------- layout section ----------- */          
+/* create a class */
+.mainBox{
+    /* prevents the div expanding with border widths and padding*/
+    box-sizing: border-box;
+    background-color: rgb(226,237,200); 
+    border: 2px solid rgb(255,0,0);
+    max-width: 800px;
+    margin: auto; 
+}
+/* ------ image styles ------ */  
+img{
+    display: block;
+}
+.img-responsive{
+    max-width: 100%;
+}
+.img-container{
+    position: relative;
+    box-sizing: border-box;
+    max-width: 80%;
+    margin: auto;
+    background-color: aliceblue;
+    }  
+    
+    .img-container .img-responsive{
+        opacity: 1;
+    }
+    .topLayer{
+        position:absolute;
+        background-color: rgb(100,100,200);
+        top: 0;
+        left: 0;
+        width:100%;
+        height:100%;
+        opacity: 0;
+        
+    }
+    .toptopLayer{
+        position:absolute;
+        color: white;
+        font-size: 3em;
+        top:100%;
+        width:100%;
+        text-align: center;
+        transform: translate(0,-100%);
+        -webkit-user-select: none; /* Safari 3.1+ */
+        -moz-user-select: none; /* Firefox 2+ */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Standard syntax */
+    }
+    
+/* ----------------------------- */
+    .cBox{
+    position: relative;
+    box-sizing: border-box;
+    max-width: 80%;
+    margin: auto;
+    background-color: rgb(40,40,40);
+    }
+    .topText{
+        position:absolute;
+        color: white;
+        font-size: 3em;
+        top:50%;
+        width:100%;
+        text-align: center;
+        transform: translate(0,-50%);
+    }
+    .cover{
+        position: absolute;
+        background-color: black;
+        opacity: 0;
+        top:0;
+        width: 100%;
+        height: 100%;
+    }
+    
+/* ----------------------------- */
+
+</style>
+
+
+  </head>
+    <body>
+          <ul>
+        <li><a href="#">Erscott's Hole  </a> </li>
+        <li><a href="#admiralty">Admiralty Islands </a> </li>
+        <li><a href="#blinkys">Blinky's Beach</a> </li>
+        </ul> 
+<hr/>
+<h1>Lord Howe Island</h1>
+<h4>A World-Heritage listed site, Lord Howe Island is only a 2 hour flight from Sydney and is home to exotic wildlife and breathtaking natural attractions.
+View of Lord Howe Island</h4>
+<h4>Lord Howe Island is Just Paradise. Immerse yourself in the spectacular surroundings and experience some of the world’s best day hikes, snorkelling on the coral reef, hand-feeding fish on Ned’s Beach and much more. </h4>
+        
+  
+        <hr/>
+        <h2>Places</h2>
+    <div class="mainBox">    
+<h3>Erscott’s Hole</h3>
+<a href="#">        
+<div id="containerBox"  class="img-container">
+<img id="imgOne" class="img-responsive" src="images/coral-sized.jpg"  alt="This is an image of coral">
+    
+    <div id="topOne" class="topLayer"> </div>
+    <div id="toptopOne" class="toptopLayer"> Header</div>
+    </div>
+    </a>
+            
+<p>Underwater view of the coral reef</p>
+<p>        
+Home to 500 fish species and 90 species of coral, Lord Howe’s snorkelling is second to none.<br/>
+A luxuriant garden of Staghorn coral dominates the iconic snorkelling destination that is Erscott’s Hole, a natural wonder within a protected intertidal groyne. 
+    </p>
+        </div>
+        
+        <hr/>
+ <div class="mainBox">  
+<h3 id="admiralty">Admiralty Islands</h3>
+<a href="#">     
+<div  class="cBox">
+<img id="imgBase" class="img-responsive" src="images/flugelman.jpg"  alt="Sculpture garden picture">
+<div class="topText"> Admiralty Islands </div>
+<div id="cover" class="cover"> </div>
+</div>
+</a>
+<p>View of Islands seen from the beach</p>
+Just 15 minutes by boat from Lord Howe rests an intriguing group of volcanic formations, dubbed the Admiralty Islands. Large pinnacles, coral reefs, larger schools of fish and diving depths of 15-40 metres characterise the islands.Eager divers flock to this area, and for good reason.
+        </div>
+<hr/>
+         <div class="mainBox">  
+<h3 id="blinkys">Blinky’s Beach</h3>
+<a href="#">     
+<div  class="cBox">
+<img id="imgBaseOne" class="img-responsive" src="images/coral-sized.jpg"  alt="Sculpture garden picture">
+<div class="topText"> Blinkey's Beach </div>
+<div id="coverOne" class="cover"> </div>
+</div>
+</a>
+<p>View of Blinkey's Beach</p>
+<p>Keen surfers and body boarders head to Blinky Beach to experience what the locals have dubbed ‘Champagne Surf’.Located on the island’s east side, the beach is the most popular place to catch a ride on some of Australia’s least crowded waves.</p>
+        </div>
+        
+              <script>
+    var anim = null;
+    var myElement = null;
+    var count = 0;
+    
+    document.getElementById("cover").onmouseover = function(){ setImage("imgBase"); }
+    document.getElementById("cover").onmouseout = function(){ resetImage(); }
+    document.getElementById("coverOne").onmouseover = function(){ setImage("imgBaseOne"); }
+    document.getElementById("coverOne").onmouseout = function(){ resetImage(); }
+    
+    function setImage(id){
+        myElement =  document.getElementById(id);
+        if(anim == null){
+            anim = setInterval(opCount, 20);
+        }
+    }
+                  
+    function resetImage(){
+            myElement.style.opacity=1;
+            clearInterval(anim);
+            anim = null;
+            count = 0;
+    }
+    
+    function opCount(){
+        count += 1;
+        myElement.style.opacity=1-count/15;
+        if(count >= 10){
+            clearInterval(anim);
+            anim = null;
+            count = 0;
+        }
+       // console.log(count);
+    }
+    
+  
+    
+    
+    
+    
+    document.getElementById("containerBox").onmouseover = function(){
+        changeImg("imgOne","topOne","toptopOne");
+    }
+     document.getElementById("containerBox").onmouseleave = function(){
+        resetImg("imgOne", "topOne", "toptopOne"); 
+    }
+    document.getElementById("containerBox").onclick = function(){
+        setUrl("https://www.google.com/");
+    }
+          
+
+    function setUrl(u){
+        location.href = u;
+    }   
+    var counter=null;
+    var selectedId;
+    var countOne = 0;
+    var posChange=0;
+    function changeImg(id_1, id_2, id_3){
+        document.getElementById(id_1).style.opacity = "0.5";
+        document.getElementById(id_2).style.opacity = "0.75";
+        document.getElementById(id_3).style.top = "90%";
+        selectedId=id_3;
+        console.log(counter);
+        if(counter == null){
+        countOne = 0;
+        counter=setInterval(counting, 10); 
+        }
+      }
+    function resetImg(id_1, id_2, id_3){
+        document.getElementById(id_1).style.opacity = "1";
+        document.getElementById(id_2).style.opacity = "0";
+        document.getElementById(id_3).style.top = "100%";
+        if(counter){
+            clearInterval(counter);
+            counter=null;
+        }
+      }
+
+    function counting(){
+        countOne += 1;
+        posChange=100-countOne/2;
+        document.getElementById(selectedId).style.top = posChange.toString()+"%";
+        if(countOne>=40){
+            clearInterval(counter);
+            counter = null;
+        }
+        
+    }
+                  
+    
+      
+      </script>
+        
+    </body>
+</html>

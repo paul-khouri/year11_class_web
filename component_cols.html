@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title> Component </title>
+      <style>
+body{
+        font-size: 100%;
+        background-color: rgb(226,237,241);  
+}
+
+h1{
+      background-color: rgb(90,0,241);
+      color: rgb(255,255,255);
+      text-align: center;
+    margin-top: 0;
+}
+          
+/* create a class */
+.mainBox{
+    /* prevents the div expanding with border widths and padding*/
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: rgb(226,237,200); 
+    border: 2px solid rgb(255,0,0);
+    max-width: 900px;
+    margin: auto; 
+}
+          
+.img-responsive{
+    max-width: 100%;
+}
+
+.col-set{
+  box-sizing: border-box;
+  border: 0px solid blue;
+  width:50%;
+  float: left;
+  padding:20px;
+
+}
+          
+          .nav-container{
+             background-color: rgb(90,0,241);
+          }
+
+          .nav{
+              list-style: none;
+              margin:0;
+              padding-left: 0;
+              padding-right: 5%;
+              text-align: right;
+              
+          }
+          
+          .nav li{
+              display: inline;
+          }
+          
+          .nav li a{
+            line-height: 1.4em;
+            font-size: 1.1em;
+              padding: 0 1em;
+              margin-right: 2px;
+              color: white;
+              border-right: 1px solid white;
+          }
+        
+          a:link{
+              text-decoration: none;
+              background-color: rgb(90,0,241);
+          }
+          
+        a:visited{
+            background-color: rgb(90,0,241);
+            color: rgb(255,0,0);
+          }
+          a:hover{
+               background-color: rgb(0,255,255);
+              color: rgb(255,255,255);
+          }
+
+          
+      
+      
+      
+      </style>
+      
+      
+  </head>
+    <body>
+        <div class="nav-container">
+        <ul class="nav">
+    <li><a href="#erscotts">Erscott's Hole  </a> </li>
+    <li><a href="#admiralty">Admiralty Islands </a> </li>
+    <li><a href="#blinkys">Blinky's Beach</a> </li>
+</ul>
+            </div>
+        <div> <h1>Header</h1></div>
+            
+        <!-- this is the start of a box -->
+        <div class="mainBox">
+            <div class="col-set">
+                <h2>Erscott’s Hole</h2>
+<img class="img-responsive" src="images/coral-sized.jpg" alt="coral picture">
+Underwater view of the coral reef
+Home to 500 fish species and 90 species of coral, Lord Howe’s snorkelling is second to none.
+A luxuriant garden of Staghorn coral dominates the iconic snorkelling destination that is Erscott’s Hole, a natural wonder within a protected intertidal groyne. 
+
+</div>
+             <div class="col-set">
+                 <h2>Admiralty Islands</h2>
+<img class="img-responsive" src="images/flugelman.jpg" alt="coral picture">
+View of Islands seen from the beach
+Just 15 minutes by boat from Lord Howe rests an intriguing group of volcanic formations, dubbed the Admiralty Islands. Large pinnacles, coral reefs, larger schools of fish and diving depths of 15-40 metres characterise the islands.Eager divers flock to this area, and for good reason.</div>
+ 
+        </div>
+        
+        <div> <h1>Footer</h1></div>
+        
+        
+        
+    </body>
+</html>

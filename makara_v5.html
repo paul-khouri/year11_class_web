@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Makara Five </title>
+      <style>
+        body{
+            font-size: 100%;
+            background-color: rgb(226,237,241);  
+            margin: 0;
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        }
+/* --- basic text styles ----*/
+        h1, h2, h3, p{
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        h1{
+            background-color: rgb(50,140,236);
+            color: rgb(255,255,255);
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 10%;
+        }
+        h2{
+              color: rgb(100,100,100);
+          }
+          
+        p{
+            letter-spacing: 0em;
+            line-height: 1.5em;
+            font-size: 0.75em;
+            margin: 0;
+            margin-bottom: 0.5em;
+        }
+          .col-set p{
+              background-color: black;
+              color: white;
+              text-align: center;
+            -webkit-transition: background-color 1.5s , letter-spacing 3s;
+            transition: background-color 1.5s, letter-spacing 3s;
+          }
+
+/*----  main containing div inluding hero image ---- */
+        .mainBox{
+            /* prevents the div expanding with border widths and padding*/
+            box-sizing: border-box;
+            border: 0px solid rgb(255,0,0);
+            max-width: 900px;
+            margin: auto; 
+            padding-bottom: 1em;
+            background-image: url("images/makara_beach_landscape.jpg");
+            background-color: #ffffff;
+            background-attachment: scroll;
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: contain;
+            overflow: hidden;
+        }
+          /* -- invisible div to push down content to bottom of hero image ---*/
+        .hero-block{
+            position: relative;
+            width: 100%;
+            padding-top: 36%;
+        }
+
+        .block-heading{
+            padding: 2px 5px;
+            margin: 0 15px;
+        }
+        .block-text{
+            background-color: black;
+            color: white;
+            font-size: 1.25em;
+            padding: 0 1em;
+        }
+              .fixed-top{
+                  box-sizing: border-box;
+                  position:absolute;
+                  top:0;
+                  left:0;
+                  width:100%;
+                  border: 0px solid red;
+              }
+/*----------------------------------------*/          
+        /* -- parent --*/  
+        .main-text{
+            background-color: white;
+            overflow: hidden;
+        }
+          
+        .main-text p{
+            margin: 1em;
+        }
+        /*--- child ---*/
+          .centred-sub{
+              margin-left: 5%;
+          }
+/*----------------------------------------*/
+          footer{
+            background-color: rgb(50,140,236);
+            color: rgb(255,255,255);
+            text-align: right;
+            height: 2em;
+            padding: 1em;
+          }
+
+
+
+/* -------------  separator ------------*/
+        .separator{
+            background-color: black;
+            color: white;
+            font-size: 1.25em;
+            margin: 0.75em 15px;
+            padding: 0.25em 0.5em;
+            overflow: hidden;
+            clear:both;
+        }
+          
+          
+/*  -- image styles --*/
+          
+        .img-responsive{
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+          
+        .inside-image{
+            width:40%;
+            float:right;
+            padding: 1% 2%;
+        }
+          .img-svg{
+              display: block;
+              height:1.25em;
+              float:right;
+          }
+
+ 
+
+
+/* - column styles-- */
+
+        .col-set{
+        box-sizing: border-box;
+        border: 0px solid blue;
+        width:33.333%;
+        float: left;
+        padding:10px;
+    -webkit-transition: background-color 2s;
+     transition: background-color 2s;
+        }
+          
+        .col-set-three{
+            width:50%;
+        }
+          
+
+        iframe{
+            display: block;
+            margin: auto;
+            width: 80%;
+            height: 400px;
+        }
+          
+/* navigation styles -----*/
+        .nav-container{
+        /*background-color: rgb(160,204,231);*/
+        }
+
+        .nav{
+        list-style: none;
+        margin:0;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+
+        }
+
+        .nav li{
+        display: inline;
+        margin: 0;
+        padding: 0;
+
+        }
+
+        .nav li a{
+        line-height: 1em;
+        font-size: 1em;
+        padding: 2em 0em;
+        color: white;
+        border-right: 0px solid white;
+        border-left: 2px solid white;
+        display: inline-block;
+        box-sizing: border-box;
+        width:5em;
+        height:5em;
+        border-radius: 50%;
+        margin: 0.5em 1em;
+        }
+
+        a:link{
+        text-decoration: none;
+        background-color: rgb(160,204,231);
+        }
+
+        a:visited{
+        background-color: rgb(160,204,231);
+        color: rgb(255,0,0);
+        }
+        a:hover{
+        background-color: rgb(50,140,236);
+        color: rgb(255,255,255);
+        }
+          .col-set:hover{
+                    background-color: rgba(50,140,236, 0.5); 
+       
+
+          }
+          
+          .col-set:hover p{
+              background-color: rgb(50,140,236);
+              letter-spacing: 0.1em;
+          }
+          @media screen and (min-width: 400px) {
+              
+              .block-text{
+                   font-size: 1.75em;
+              }
+              p{
+                  font-size:1.1em;
+              }
+
+              
+              
+              
+          }
+        @media screen and (min-width: 1100px) {
+            .nav{
+                text-align: left;
+            }
+              .nav li{
+                  display: block;
+            }
+            .nav li a{
+                text-align: center;
+            }
+            
+        .fixed-top{
+              position: fixed;
+              top:0;
+              left:0;
+              width: 5em;
+          }
+              
+              
+          }
+
+
+
+
+
+          
+      
+      
+      
+      </style>
+      
+      
+  </head>
+    <body>
+
+        
+        <div class="mainBox">
+            
+        <div class="hero-block">
+                <div class="fixed-top">
+        <nav class="nav-container">
+        <ul class="nav">
+    <li><a href="#gallery">Gallery</a></li><li><a href="#story">Story</a></li><li><a href="#location">Location</a></li>
+</ul>
+            </nav>
+        </div>
+            
+            </div>
+        <div class="block-heading"><p><span class="block-text">Makara Beach</span> </p>
+        <p><span class="block-text">Located in Wellington's south west</span></p>
+            
+    <div class="main-text">
+    <div class="inside-image"><img class="img-responsive" src="images/hill_makara_beach_square.jpg" alt="Hill"></div>
+        
+        <div class="centred-sub"><h2>Makara, officially Mākara, is a locality located at the western edge of Wellington, New Zealand, close to the shore of the Tasman Sea.</h2>
+            
+            <h3>The suburb is named after the Makara Stream <br/>
+                (mā is Māori for white, kara is a kind of greywacke stone).<br/>
+        With winding road access from Karori or Ohariu, Makara is a rural area with sparse development.</h3>
+            </div>
+            
+            </div>
+    <div  id="gallery" class="separator"> Gallery of Marakara Images <a href="#"><img class="img-svg" src="images/uparrow.svg"></a></div>
+<!-- first row (three columns) -->  
+<a href="images/houses_makara_sized.jpg">
+<div class="col-set">
+<img class="img-responsive" src="images/makara_beach_sized.jpg" alt="coral picture">
+<p>View of the Beach</p>
+</div>
+</a>
+
+
+<a href="images/houses_makara_sized.jpg">
+<div class="col-set">
+<img class="img-responsive" src="images/wind_turbine_to_makara_sized.jpg" alt="coral picture">
+<p>Meridian Wind Farm</p>
+</div>
+</a>
+            
+<a href="images/houses_makara_sized.jpg">
+<div class="col-set">
+<img class="img-responsive" src="images/makara_dwelling_sized.jpg" alt="coral picture">
+<p>Township</p>
+</div>
+</a>          
+<!-- second row (two columns) -->
+<a href="images/houses_makara_sized.jpg">
+<div class="col-set col-set-three">
+<img class="img-responsive" src="images/houses_makara_sized.jpg" alt="coral picture">
+<p>Local Houses</p>
+</div>
+</a>
+<a href="images/houses_makara_sized.jpg">
+<div class="col-set col-set-three">
+<img class="img-responsive" src="images/houses_makara_distant_sized.jpg" alt="coral picture">
+<p>Local Houses</p>
+</div>
+</a>
+            <div id="story" class="separator"> The story of Makara <a href="#"><img class="img-svg" src="images/uparrow.svg"></a> </div>
+            <div class="block-heading">
+            <p>In the nineteenth century there was a small amount of gold-mining at Terawhiti Station but no large-scale workable deposits were ever found. Tunnels associated with mining activity still exist on the hillside.</p>
+
+<p>In 1921 Makara War Memorial was unveiled, built in memory of local residents who died in World War 1.</p>
+
+<p>There are gun emplacements at Fort Opau which still remain. These were built as part of the coastal fortifications of New Zealand due to fears of invasion during the second world war. A small foreshore reserve of sand dunes was bulldozed during this time as it was felt these could be hiding places for an invading army. This destroyed ecosystem is slowly being restored by local community groups. </p>
+
+<p>The Cook Strait Cable comes ashore from the South Island at Oteranga Bay in the suburb of Makara. The HVDC line came into operation in April 1965 and was at the time the worlds largest submarine cable.</p>
+
+<p>In 2007 construction began on Meridian Energy's West Wind farm along Terawhiti Ridge. A temporary wharf was constructed in Oteranga Bay to move turbine parts into the area without going through Wellington's Central Business District. The 62 turbine farm was completed in 2009 and includes a recreation area.</p> 
+
+<p>Makara Beach was hit by Cyclone Gita in 2018 and the community and local council have put a plan in place to reduce the effects of climate change since. </p>
+
+<p>In 2019, the name of the locality was officially gazetted as Mākara.</p>
+            </div>
+            
+            
+             <div id="location" class="separator"> Location map <a href="#"><img class="img-svg" src="images/uparrow.svg"></a> </div>
+            <iframe  frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=174.69836711883545%2C-41.26006560670417%2C174.7704648971558%2C-41.21578921358365&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/>
+            <small><a href="https://www.openstreetmap.org/#map=14/-41.2379/174.7344">View Larger Map</a></small>
+             <div id="location" class="separator"> Google Earth 3D view <a href="#"><img class="img-svg" src="images/uparrow.svg"></a></div>
+            <div class="block-heading">
+            <img class="img-responsive" src="images/makara_3d.jpg" alt="google earth cature of Makara">
+            </div>
+              <div id="location" class="separator"> Location map from google <a href="#"><img class="img-svg" src="images/uparrow.svg"></a></div>
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1F7QXkGggnfEHQ2SbfVl4HNAm95u0LAss" width="640" height="480"></iframe>
+            </div>
+        </div>
+     <footer> <p> &copy; P Khouri 2019</p> </footer>
+        <style>
+        </style>
+        <div class="info-box">
+        
+        </div>
+        <script>
+        window.addEventListener('scroll', scroller);
+            function scroller(e){
+                console.log("scrolled");
+                console.log(window.scrollY);
+            }
+        </script>
+    </body>
+</html>
