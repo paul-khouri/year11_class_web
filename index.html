@@ -3,41 +3,133 @@
   <head>
     <meta charset='UTF-8'/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
       <title>Catalogue </title>
+      <style>
+          body{
+              font-size: 100%;
+              font-family: 'Nanum Gothic', sans-serif;
+          }
+          nav{
+              border: 1px solid pink;
+              font-size: 2em;
+              
+          }
+          ul{
+              list-style-type: none;
+              padding:0;
+              margin:0;
+          }
+          li{
+              border: 0px solid blue;
+          }
+          li a{
+              padding: 20px;
+              text-decoration: none;
+               display: block;
+              background-color: coral;
+          }
+          li a:hover{
+             background-color: pink;
+              color:white;
+          }
+          
+          
+          
+          li:nth-child(3n-2) a{
+              background-color: rgb(200,0,150);
+              color:rgb(255,255,255);
+          }
+          
+            li:nth-child(3n-2) a:hover{
+              background-color: rgb(200,200,150);
+              color:rgb(50,50,50);
+          }
+          
+            li:nth-child(3n-1) a{
+                background-color: rgb(230,0,150);
+              color:rgb(255,255,255);
+          }
+          
+            li:nth-child(3n-1) a:hover{
+              background-color: rgb(230,200,150);
+              color:rgb(50,50,50);
+          }
+          
+            li:nth-child(3n) a{
+                background-color: rgb(240,20,170);
+                color:rgb(255,255,255);
+          }
+          
+            li:nth-child(3n) a:hover{
+              background-color: rgb(230,150,150);
+              color:rgb(50,50,50);
+          }
+      /*    
+        li:nth-child(3n-2){
+              background-color: blue;
+              color:white;
+          }
+        li:nth-child(3n-1){
+              background-color: indianred;
+          }
+        li:nth-child(3n){
+              background-color: cadetblue;
+          }
+      */
+      </style>
     </head>
     <body>
         <nav>
         <ul>
-            <li><a href="bg_test.html" target="_blank">One </a>
-            <p>Fixed backgrounds on scroll (simple parallax) </p>   </li>
-            <li><a href="col_component.html" target="_blank">Two </a>
-            <p> Basic structuring of two columns (class activity) </p></li>
-            <li><a href="component.html" target="_blank">Three </a>
-            <p> Header and responsive image in div (class activity) </p></li>
-            <li><a href="component_cols.html" target="_blank">Four </a>
-            <p> Two columns with nav bar and footer above below </p></li>
-            <li><a href="component_cols_no_nav.html" target="_blank">Five </a>
-            <p> Two columns with nav bar and footer above below  </p></li>
-            <li><a href="drop_menu_test.html" target="_blank">Six </a>
-            <p> Click on and off drop down menu over hero image </p></li>
-             <li><a href="index_a.html" target="_blank">Seven </a>
-            <p> Lord Howe layout (simple, list nav) with emphasis on fonts </p></li>
-            <li><a href="index_extra_tests.html" target="_blank">Eight </a>
-            <p> Lord Howe layout (simple, list nav) with emphasis boxing and colours </p></li>
-            <li><a href="index_extra_tests__divtargeting.html" target="_blank">Nine </a>
-            <p> Absolute positioning of divs, layering, hiding overflow and css transition example </p></li>
-            <li><a href="index_extra_tests__divtargeting_1.html" target="_blank">Ten </a>
-            <p> CSS transition in a layout example and simple js lightbox </p></li>
-            <li><a href="index_extra_tests_1.html" target="_blank">Eleven </a>
-            <p> Javascript animation test with problems due to layers </p></li>
-            <li><a href="index_extra_tests_2.html" target="_blank">Twelve </a>
-            <p> Javascript animation test with problems due to layers but improved </p></li>
-            <li><a href="index_v1.html" target="_blank">Thirteen </a>
-            <p> Starting build </p></li>
-            <li><a href="index_v2.html" target="_blank">Thirteen </a>
-            <p> Starting build </p></li>
-            <li><a href="index_v3.html" target="_blank">Thirteen </a>
-            <p> Starting build </p></li>
+            <li><a href="bg_test.html" target="_win">
+               Fixed backgrounds on scroll (simple parallax) </a>  </li>
+            <li><a href="col_component.html" target="_win">
+            Basic structuring of two columns (class activity) </a></li>
+            <li><a href="component.html" target="_win"> 
+            Header and responsive image in div (class activity) </a></li>
+            <li><a href="component_cols.html" target="_win">
+             Two columns with nav bar and footer above below </a></li>
+            <li><a href="component_cols_no_nav.html" target="_win"> 
+             Two columns with nav bar and footer above below  </a></li>
+            <li><a href="drop_menu_test.html" target="_win">
+             Click on and off drop down menu over hero image </a></li>
+             <li><a href="index_a.html" target="_win"> 
+             Lord Howe layout (simple, list nav) with emphasis on fonts</a> </li>
+            <li><a href="index_extra_tests.html" target="_win">
+             Lord Howe layout (simple, list nav) with emphasis boxing and colours </a> </li>
+            <li><a href="index_extra_tests__divtargeting.html" target="_win"> 
+             Absolute positioning of divs, layering, hiding overflow and css transition example </a></li>
+            <li><a href="index_extra_tests__divtargeting_1.html" target="_win"> 
+             CSS transition in a layout example and simple js lightbox </a></li>
+            <li><a href="index_extra_tests_1.html" target="_win"> 
+             Javascript animation test with problems due to layers </a></li>
+            <li><a href="index_extra_tests_2.html" target="_win">
+             Javascript animation test with problems due to layers but improved </a> </li>
+            <li><a href="index_v1.html" target="_win"> 
+             Starting build </a></li>
+            <li><a href="index_v2.html" target="_win"> 
+             Starting build </a></li>
+            <li><a href="index_v3.html" target="_win"> 
+             Starting build </a></li>
+            <li><a href="left_nav.html" target="_win">
+             Left Nav over image and column blocks with svg </a></li>
+            <li><a href="makara.html" target="_win"> 
+             Makara </a></li>
+             <li><a href="makara_nostyle.html" target="_win"> 
+             Makara no style </a> </li>
+             <li><a href="makara_v2.html" target="_win"> 
+             Makara Two </a> </li>
+             <li><a href="makara_v3.html" target="_win"> 
+             Makara Three</a></li>
+            <li><a href="makara_v4.html" target="_win"> 
+             Makara Four </a></li>
+            <li><a href="makara_v5.html" target="_win"> 
+             Makara Five </a></li>
+            <li><a href="max_width_test.html" target="_win"> 
+             Basic Max Width </a></li>
+            <li><a href="parallax.html" target="_win"> 
+             Parallax from W3 School </a></li>
             
             </ul>
         
