@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+        <meta charset='UTF-8'/>
+        <title>Component Div</title>
+  <style>
+      
+/* ------- type styles----------  */
+      
+
+body{
+        margin: 0;
+        font-size: 100%;
+        font-family: sans-serif;
+      }
+   
+h1{
+      text-align: center;
+      background-color: rgb(0,0,0);
+      margin-bottom: 20px;
+      padding: 10px;
+          
+      }
+      
+  
+      
+      
+/* -------layout----------  */
+.mainbox{
+    /* controls whether borders push out from width or push in */
+        box-sizing: border-box;
+        border: 20px solid rgb(0, 100,0);
+        background-color: rgb(100,45, 255);
+        color: rgb(255, 255, 255);
+        max-width: 800px;
+        margin: auto;   
+        overflow: hidden;
+}
+      
+      .col{
+          box-sizing: border-box;
+          width:50%;
+          border:3px solid rgb(255,255,255);
+          float:left;
+      }
+      
+.footer{
+          background-color: rgb(0,0,0);
+          color: rgb(255,255,255);
+          padding: 10px 50px;
+          text-align: right;
+      }
+      
+/* -------images----------  */     
+.img-responsive{
+        max-width: 80%;  
+        display: block;
+        margin: auto;
+} 
+      
+   
+
+      .caption{
+          text-align: center;
+          font-size: 1.5em;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          
+      }
+      
+
+   
+      
+/* -------navigation----------  */ 
+ 
+      .nav{
+          background-color: rgb(200,250,180);
+          list-style: none;
+          margin: 0;
+          padding:0;
+       
+      }
+      
+      .nav li{
+          display: inline;
+      }
+      
+      .nav li a{
+          padding: 10px;
+          display: inline-block;  
+          font-weight: bold;
+      }
+      
+          a:link{
+              text-decoration: none;
+              background-color: rgb(90,0,241);
+          }
+          
+        a:visited{
+            background-color: rgb(90,0,241);
+            color: rgb(255,255,255);
+          }
+          a:hover{
+               background-color: rgb(0,255,255);
+              color: rgb(255,255,255);
+          }
+      
+      @media screen and (max-width: 600px) {
+          
+        .col{
+
+          width:100%;
+          float:none;
+      }
+          
+          
+          
+      }
+    
+      
+      </style>    
+    </head>
+    <body>
+<!-- this is the start of the nav list in a container div -->      
+<div>
+<ul class="nav">
+    <li><a href="#erscotts">Erscott's Hole</a></li><li><a href="#admiralty">Admiralty Islands</a></li><li><a href="#blinkys">Blinky's Beach</a></li>
+</ul>
+</div>
+<!-- end of navigation --> 
+  <div class="mainbox"> 
+            <div class="col">
+            <h1>Picture 1</h1>
+            <img class="img-responsive" src="images/admiralty_islands_small.jpg">
+            <div class="caption"> This is a little caption for the picture</div>
+            </div>
+      
+            <div class="col">
+            <h1>Picture 2</h1>
+            <img class="img-responsive" src="images/Blinkysbeach_small.jpg">
+            <div class="caption"> This is a little caption for the picture</div>
+            </div>
+</div>
+      
+<div class="footer"> &copy; P K</div>
+
+    </body>
+</html>
