@@ -2,6 +2,7 @@
 <html lang='en'>
   <head>
         <meta charset='UTF-8'/>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Component Div</title>
   <style>
       
@@ -36,13 +37,26 @@ h1{
         margin: auto;   
         overflow: hidden;
 }
+    
+.col{
+    box-sizing: border-box;
+    width: 33.333%;
+    border: 1px solid rgb(255,255,255);
+    float:left;
+          
+          
+      }      
       
+      
+/* 
       .col{
           box-sizing: border-box;
           width:50%;
           border:3px solid rgb(255,255,255);
           float:left;
       }
+      
+      */
       
 .footer{
           background-color: rgb(0,0,0);
@@ -91,19 +105,27 @@ h1{
           font-weight: bold;
       }
       
-          a:link{
-              text-decoration: none;
-              background-color: rgb(90,0,241);
-          }
+     
+      
+a:link{
+text-decoration: none;
+background-color: rgb(90,0,241);
+color: rgb(255,255,255);
+}
           
-        a:visited{
-            background-color: rgb(90,0,241);
-            color: rgb(255,255,255);
-          }
-          a:hover{
-               background-color: rgb(0,255,255);
-              color: rgb(255,255,255);
-          }
+a:visited{
+background-color: rgb(90,0,241);
+color: rgb(255,255,255);
+}
+    
+a:hover{
+background-color: rgb(0,255,255);
+color: rgb(255,255,255);
+}
+      
+      
+      
+      /*
       
       @media screen and (max-width: 600px) {
           
@@ -116,6 +138,7 @@ h1{
           
           
       }
+      */
     
       
       </style>    
@@ -129,11 +152,19 @@ h1{
 </div>
 <!-- end of navigation --> 
   <div class="mainbox"> 
+            
             <div class="col">
             <h1>Picture 1</h1>
             <img class="img-responsive" src="images/admiralty_islands_small.jpg">
             <div class="caption"> This is a little caption for the picture</div>
             </div>
+      
+            <div class="col">
+            <h1>Picture 2</h1>
+            <img class="img-responsive" src="images/Blinkysbeach_small.jpg">
+            <div class="caption"> This is a little caption for the picture</div>
+            </div>
+      
       
             <div class="col">
             <h1>Picture 2</h1>

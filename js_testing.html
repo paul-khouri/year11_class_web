@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Makara Five </title>
+      
+      <style>
+          body{
+              font-family: sans-serif;
+              font-size: 100%;
+              line-height: 1.5em;
+              margin: 0px;
+          }
+      /* -------layout----------  */
+.mainbox{
+    /* controls whether borders push out from width or push in */
+        box-sizing: border-box;
+        border: 20px solid rgb(0, 100,0);
+        background-color: rgb(100,45, 255);
+        color: rgb(255, 255, 255);
+        margin: auto;   
+        overflow: hidden;
+}
+
+          
+          .panel{
+              position: fixed;
+              top:0;
+              left:0;
+              background-color: rgba(70,70,70, 0.5);
+              color: rgb(255,255,255);
+              width:300px;
+          }
+          .panel div{
+              padding:5px;
+              border-bottom: 1px solid rgb(255,255,255);
+          }
+          
+/* -------images----------  */     
+.img-responsive{  
+        display: block;
+        margin: auto;
+} 
+      
+      
+      </style>
+      
+    </head>
+    <body>
+        <div class="panel">
+            <div>Screen, Window, Page Information</div>
+            <div id="scroll_info">Scroll Y: 0</div>
+            <div id="page_info"></div>
+            <div id="screen_pos"></div>
+            <div id="screen_info"></div>
+            <div id="window_info"></div>
+        </div>
+        
+      
+            <img class="img-responsive" src="images/big_grid.png">
+
+<script>
+                    
+window.addEventListener('scroll', scroller);
+    
+    function scroller(e){
+        
+    document.getElementById("scroll_info").innerHTML = "Scroll Y: " + window.scrollY;
+    }
+
+window.addEventListener("resize", my_resize);
+    
+    function my_resize(e){
+
+        let window_string = "Window Outer width: "+e.currentTarget.outerWidth +
+        "<br> Window Inner width: "+e.currentTarget.innerWidth+
+        "<br> Window Outer Height: "+e.currentTarget.outerHeight+ 
+        "<br> Window Inner height: "+e.currentTarget.innerHeight;
+
+        document.getElementById("window_info").innerHTML = window_string;
+    };
+
+
+window.addEventListener("load", win_load);
+    
+    function win_load(e){
+        
+        let screen_string = "Screen Width: "+e.currentTarget.screen.availWidth +"<br> Screen Height: "+e.currentTarget.screen.availHeight;
+
+        let window_string = "Window Outer Width: "+e.currentTarget.outerWidth +
+        "<br> Window Inner Width: "+e.currentTarget.innerWidth+
+        "<br> Window Outer Height: "+e.currentTarget.outerHeight+ 
+        "<br> Window Inner Height: "+e.currentTarget.innerHeight;
+
+        let window_pos_string = "Window X: " + e.currentTarget.screenX+"<br>Window Y:  "+e.currentTarget.screenY;
+
+        document.getElementById("screen_pos").innerHTML=window_pos_string;
+        document.getElementById("screen_info").innerHTML=screen_string;   
+        document.getElementById("window_info").innerHTML = window_string;
+        document.getElementById("page_info").innerHTML = "Height of page (includes fixed): "+document.body.scrollHeight;
+
+    }
+                    
+        </script>
+        
+    
+    
+    </body>
+</html>
