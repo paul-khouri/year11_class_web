@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+      <title>Catalogue </title>
+      
+     <style>       
+/* ------- type styles----------  */
+      
+
+body{
+        margin: 0;
+        font-size: 100%;
+        font-family: sans-serif;
+    background-color: rgb(100,45, 255);
+      }
+   
+h1{
+      text-align: center;
+      background-color: rgb(0,0,0);
+      margin-bottom: 20px;
+      padding: 10px;
+          
+      }
+      
+  
+      
+      
+/* -------layout----------  */
+.mainbox{
+    /* controls whether borders push out from width or push in */
+        box-sizing: border-box;
+        border: 2px solid rgb(150,75, 255);
+        background-color: rgb(150,75, 255);
+        color: rgb(255, 255, 255);
+        max-width: 900px;
+        margin: 50px auto;   
+        overflow: hidden;
+}
+    
+.col{
+    box-sizing: border-box;
+    width: 33.333%;
+    border: 1px solid rgb(255,255,255);
+    float:left;  
+      }      
+      
+      
+.footer{
+          background-color: rgb(0,0,0);
+          color: rgb(255,255,255);
+          padding: 10px 50px;
+          text-align: right;
+      }
+      
+/* -------images----------  */     
+.img-responsive{
+        max-width: 100%;  
+        display: block;
+        margin: auto;
+} 
+      
+   
+
+.caption{
+          text-align: center;
+          font-size: 1.5em;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          
+      }
+      
+
+   
+      
+/* -------navigation----------  */ 
+ 
+      .nav{
+          background-color: rgb(200,250,180);
+          list-style: none;
+          margin: 0;
+          padding:0;
+       
+      }
+      
+      .nav li{
+          display: inline;
+      }
+      
+      .nav li a{
+          padding: 10px;
+          display: inline-block;  
+          font-weight: bold;
+          border-left: 1px solid white;
+      }
+      
+     
+      
+a:link{
+text-decoration: none;
+background-color: rgb(90,0,241);
+color: rgb(255,255,255);
+}
+          
+a:visited{
+background-color: rgb(90,0,241);
+color: rgb(255,255,255);
+}
+    
+a:hover{
+background-color: rgb(0,255,255);
+color: rgb(255,255,255);
+}
+         .my-parent{
+             position:relative;
+             
+         }
+        .my-child_rel{
+             position:relative;
+            top: -50px;
+            left:50px;
+         }
+        .my-child_abs{
+             position:absolute;
+            top: 100px;
+            left:200px;
+         }
+   </style>
+    </head>
+    <body>
+        <div class="mainbox">
+            <div class="my-parent">
+            <img class="img-responsive" src="images/900x600.png">
+                <div class="my-child_rel"><img class="img-responsive" src="images/600x600_bw.png"> </div>
+                <div><img class="img-responsive" src="images/600x600.png">  </div>
+               <img class="img-responsive" src="images/900x600.png"> 
+        </div>
+             </div>
+          
+        
+            <div class="mainbox" style="background-color: rgb(100,0,50);">
+            <img class="img-responsive" src="images/900x600.png">
+            </div>
+       
+        
+    </body>
+</html>
