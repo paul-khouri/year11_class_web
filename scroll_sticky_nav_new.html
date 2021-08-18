@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+        <meta charset='UTF-8'/>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+        <title>Scroll Sticky Nav</title>
+  <style>
+      
+/* ------- type styles----------  */
+      
+
+body{
+        margin: 0;
+        font-size: 100%;
+        font-family: 'DM Sans', sans-serif;
+    background-color: rgb(220,240,250);
+    background-image: url("images/tiles/test_tiles_svg_1.svg");
+     background-size: 100px 100px;
+      }
+   
+h1{
+      text-align: center;
+      background-color: rgb(0,0,0);
+      margin: 20px 0;
+      padding: 10px;
+          
+      }
+      
+  
+      
+      
+/* -------layout----------  */
+.mainbox{
+    /* controls whether borders push out from width or push in */
+        box-sizing: border-box;
+        border: 0px solid rgb(0, 100,0);
+        background-color: rgb(100,45, 255);
+        color: rgb(255, 255, 255);
+        max-width: 900px;
+        margin: auto;   
+        margin-bottom: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+}
+    
+.col{
+    box-sizing: border-box;
+    width: 33.333%;
+    border: 0px solid rgb(255,255,255);
+    float:left;  
+      }      
+      
+      
+.footer{
+          background-color: rgb(0,0,0);
+          color: rgb(255,255,255);
+          padding: 50px 100px;
+          text-align: right;
+      }
+      
+/* -------images----------  */     
+.img-responsive{
+        max-width: 80%;  
+        display: block;
+        margin: auto;
+} 
+      
+.img-responsive_full{
+        max-width: 100%;  
+        display: block;
+        margin: auto;
+} 
+      
+   
+
+.caption{
+          text-align: center;
+          font-size: 1em;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          
+      }
+      
+
+   
+      
+/* -------navigation----------  */ 
+      #navigation-container{
+          background-color: rgb(50,80,200);
+          transition: background-color 2s;
+          
+      }
+      .nav-container{
+          position: fixed;
+          box-sizing: border-box;
+          border: 0px solid blue;
+          width:100%;
+          top:0;
+          left:0;
+          z-index: 1;
+      }
+ 
+      .nav{
+         box-sizing: border-box;
+          border: 0px solid red;
+          list-style: none;
+          margin: 0;
+          padding:0;
+          text-align: center;
+          
+       
+      }
+      
+      .nav li{
+          display: inline;
+      }
+      
+      .nav li a{
+          padding: 10px;
+          display: inline-block;  
+          font-weight: bold;
+          border-left: 1px solid white;
+          
+       
+      }
+      
+     
+      
+a:link{
+text-decoration: none;
+background-color: rgb(90,0,241);
+color: rgb(255,255,255);
+}
+          
+a:visited{
+background-color: rgb(90,0,241);
+color: rgb(255,255,255);
+}
+    
+a:hover{
+background-color: rgb(0,255,255);
+color: rgb(255,255,255);
+}
+      
+      
+      
+     
+      
+      @media screen and (max-width: 600px) {
+          
+        .col{
+
+          width:100%;
+          float:none;
+      }
+          
+          .nav li a{
+              display: block;
+              border-left: 0px solid white;
+          }
+          
+          
+          
+      }
+     
+    
+      
+      </style>    
+    </head>
+    <body>
+<!-- this is the start of the nav list in a container div --> 
+        <div class="mainbox"> 
+<div id="above-nav" style="border:0px solid pink;">
+<img id="hero" class="img-responsive_full" src="images/tongariro_landscape_wide.jpg" alt="tongariro">
+    </div>
+<div id="navigation-container">
+<ul class="nav">
+    <li><a href="#erscotts">Erscott's Hole</a></li><li><a href="#admiralty">Admiralty Islands</a></li><li><a href="#blinkys">Blinky's Beach</a></li>
+</ul>
+</div>
+<!-- end of navigation --> 
+
+  <div id="below_nav" style="overflow:hidden;">
+      <div id="big-header" style="padding: 20px 0px;"><h1 style="margin:0;"> Big Heading </h1></div>
+            
+            <div class="col">
+            <h1>Picture 1</h1>
+            <img class="img-responsive" src="images/admiralty_islands_small.jpg">
+            <div class="caption"> This is a little caption for the picture</div>
+            </div>
+      
+            <div class="col">
+            <h1>Picture 2</h1>
+            <img class="img-responsive" src="images/Blinkysbeach_small.jpg">
+            <div class="caption"> This is a little caption for the picture</div>
+            </div>
+      
+      
+            <div class="col">
+            <h1>Picture 2</h1>
+            <img class="img-responsive" src="images/Blinkysbeach_small.jpg">
+            <div class="caption"> This is a little caption for the picture</div>
+            </div>
+    </div>
+            <style>
+                .slides-box{
+                    position: relative;
+                    background-color: dodgerblue;
+                    overflow: visible;
+                    width:50%;
+                    margin: auto;
+        
+                   
+
+                    
+                }
+                .slide{
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    opacity: 0;
+                    transition: opacity 1s;
+                   
+                    
+                }
+                
+
+                
+                .slide-button{
+                    width:20px;
+                    display: inline-block;
+                    box-sizing: border-box;
+                    background-color: aqua;
+                    color: blueviolet;
+                }
+                
+                .dot{
+                        height: 25px;
+                        width: 25px;
+                        background-color: #bbb;
+                        border-radius: 50%;
+                        display: inline-block;
+                    margin: 0 10px;
+                     transition: background-color 2s;
+                }
+                .dot:hover{
+                    cursor: pointer;
+                    
+                }
+       
+            
+            </style>
+            
+            <div class="slides-box" id="slides-box">
+                 <img  src="images/holder-image_1x1.svg">
+                <img class="slide" src="images/gamecharacter-01.svg">
+                 <img class="slide" src="images/gamecharacter-02.svg">
+                 <img class="slide" src="images/gamecharacter-03.svg">
+                 <img class="slide" src="images/gamecharacter-04.svg">
+                
+                <div style="text-align: center;">
+                    <span class="dot"></span>
+                     <span class="dot"></span>
+                     <span class="dot"></span>
+                     <span class="dot"></span>
+                    
+                
+                </div>
+        
+            
+            </div>
+            
+            
+              <div>
+            
+            <div class="col">
+            <h1>Picture 1</h1>
+            <img class="img-responsive" src="images/admiralty_islands_small.jpg">
+            <div class="caption"> This is a little caption for the picture</div>
+            </div>
+      
+            <div class="col">
+            <h1>Picture 2</h1>
+            <img class="img-responsive" src="images/Blinkysbeach_small.jpg">
+            <div class="caption"> This is a little caption for the picture</div>
+            </div>
+      
+      
+            <div class="col">
+            <h1>Picture 2</h1>
+            <img class="img-responsive" src="images/Blinkysbeach_small.jpg">
+            <div class="caption"> This is a little caption for the picture</div>
+            </div>
+    </div>
+            
+              <div>
+            
+            <div class="col">
+            <h1>Picture 1</h1>
+            <img class="img-responsive" src="images/admiralty_islands_small.jpg">
+            <div class="caption"> This is a little caption for the picture</div>
+            </div>
+      
+            <div class="col">
+            <h1>Picture 2</h1>
+            <img class="img-responsive" src="images/Blinkysbeach_small.jpg">
+            <div class="caption"> This is a little caption for the picture</div>
+            </div>
+      
+      
+            <div class="col">
+            <h1>Picture 2</h1>
+            <img class="img-responsive" src="images/Blinkysbeach_small.jpg">
+            <div class="caption"> This is a little caption for the picture</div>
+            </div>
+    </div>
+</div>
+      
+<div class="footer"> &copy; P K</div>
+
+
+    
+        <script>
+
+        // slideshow
+
+//get all slide and dot nodes in lists.
+// all slides have default opacity of 0.
+        var inner_slides = document.getElementById("slides-box").querySelectorAll(".slide");
+        var dots = document.getElementById("slides-box").querySelectorAll(".dot");
+        console.log(inner_slides);
+        console.log(dots);
+
+        slide_counter = 0;
+        num_slides= inner_slides.length;
+        //initial state
+        // set first image to visible
+        inner_slides[0].style.opacity="1";
+        // set active color
+        dots[0].style.backgroundColor="rgb(250,250,100)";
+
+        for(var i=0; i<num_slides; i++ ){
+        dots[i].addEventListener('click', moveSlide);
+        }
+
+        var current_index = 0;
+        function moveSlide(e){
+        //console.log(dots.index(this));
+        slide_index = getIndex(this);
+
+
+        // set current slide dot to neutral
+        dots[current_index%num_slides].style.backgroundColor="rgb(200,200,200)";
+        // set current slide to opacity 0;
+        inner_slides[current_index%num_slides].style.opacity="0";
+        // update current index 
+        current_index = slide_index;
+        // set next slide dot to active
+        dots[ current_index%num_slides].style.backgroundColor="rgb(250,250,0)";
+        // set new slide to opacity 1;
+        inner_slides[current_index%num_slides].style.opacity="1";
+
+        }
+
+        function getIndex(a){
+        for(var i=0; i< num_slides; i++){
+        if(dots[i]  == a){
+        console.log(i);
+        return i;
+        }
+        }
+
+
+        }
+
+
+        // -- sticky nav
+
+        var height_before_stick=0;
+
+        var x= document.getElementById("navigation-container");
+
+        var z= document.getElementById("below_nav");
+        // remove sticking class on load
+        x.classList.remove('nav-container');
+
+        // element containing all page elements above the nav 
+        var y = document.getElementById("above-nav");
+
+        // waiting for hero image to load
+        var img=new Image()
+        img.onload = function(){
+        console.log("yes its here");
+
+        // when it has, we have scroll height required before stick
+
+        height_before_stick = y.offsetHeight;
+
+        console.log(y.offsetHeight);
+        //console.log(y.scrollHeight);
+        //console.log(y.clientHeight);
+        }
+        img.onerror = function() {
+        console.log("image failed to load");
+        }
+        img.src="images/tongariro_landscape_wide.jpg";
+
+
+        // event listener for scoll height
+        window.addEventListener('scroll', scroller);
+
+
+
+
+        function scroller(e){
+        if((window.scrollY > height_before_stick) && (height_before_stick>0)){
+        // add class to stick nav
+        x.classList.add('nav-container');
+        x.style.backgroundColor = "rgb(0,0,0)";
+        // set margin of element below nav to have a top margin the height of the nav
+        // this will avoid any jumps when the nav sticks
+        var marg = x.offsetHeight.toString()+'px'
+        z.style.marginTop = marg;
+
+
+        }else{
+        // reset back to initial state
+        x.classList.remove('nav-container');
+        z.style.marginTop = "0px";
+        x.style.backgroundColor = "rgb(100,100,200)";
+
+
+        }
+        }
+
+        window.addEventListener('resize', resized);
+        function resized(e){
+        height_before_stick = y.offsetHeight;
+        console.log(height_before_stick);
+
+        }
+        // --- other
+        var bh = document.getElementById("big-header");
+        console.log("Big heading offset height: "+bh.offsetHeight);
+        document.fonts.onloadingdone = function (fontFaceSetEvent) {
+        console.log('onloadingdone we have ' + fontFaceSetEvent.fontfaces.length + ' font faces loaded');
+        console.log("Big heading offset height: "+bh.offsetHeight);
+        };
+
+
+
+
+        </script>
+
+</body>
+</html>
