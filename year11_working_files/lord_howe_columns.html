@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+        <meta charset='UTF-8'/>
+        <title>Lord Howe Island - Columns</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet"> 
+        <style>
+         body{
+             font-family: 'Roboto', sans-serif;
+             /* set to user font size */
+             font-size: 100%;
+             line-height: 1.5;
+             /* 1em = one 100% sized character */
+            letter-spacing: 0.1em;
+            margin: 0;
+         }
+         h1{
+            font-size: 3em;
+         }
+         h2{
+             font-size: 2.5em;
+             text-align: center;
+             margin:0;
+             margin-top: 0.5em;
+             color: rgb(255,255,255);
+
+             }
+         h3{
+             font-size: 1em;
+             background-color: rgb(0,0,0);
+             color: rgb(255,255,255);
+             text-align: center;
+             
+             margin-top:1em;
+             margin-bottom: 0;
+
+             
+            
+             }
+         p{
+            font-size: 1em;
+            font-weight: 100;
+
+         }
+         .col p{
+             color: rgb(255,255,255);
+             margin:1em;
+         }
+
+         .main-box{
+             max-width: 900px;
+             margin:auto;
+             border:0px solid green;
+             overflow: hidden;
+             background-color: rgb(45,45,45);
+             border-top-left-radius: 1em;
+             border-top-right-radius: 1em;
+           
+         }
+         .col{
+            border:0px solid red;
+            box-sizing: border-box;
+            width: 33.33%;
+            float: left;
+         }
+         footer{
+             width:100%;
+             padding: 2em;
+             background-color: rgb(0,0,0);
+             box-sizing: border-box;
+
+         }
+         .img-responsive{
+             max-width:100%;
+             margin:auto;
+             display: block;
+          
+         }
+         .img-padded{
+            max-width:80%;
+         }
+
+     
+         .caption{
+            text-align: center;
+             font-style: italic;
+             background-color: rgb(0,0,0);
+             color: rgb(255,255,255);
+
+             margin-top:0;
+             font-size: 0.5em;
+    
+         }
+
+         .nav-container{
+             background-color: rgb(0,0,0);
+             text-align: center;
+         }
+
+         .nav{
+             list-style: none;
+             margin:0;
+             padding:0;
+             /*
+             text-align: center;
+             */
+         }
+
+         .nav li{ 
+             display:inline;
+         }
+         .nav li a{
+             padding: 1.5em;
+             display: inline-block;
+             border-right: 1px dashed rgb(255,255,255);
+         }
+         /* pseudo classes*/
+         a:link{
+             text-decoration: none;
+             color: rgb(255,255,255);
+         }
+         a:visited{
+            color: rgb(255,255,255);
+         }
+         a:hover{
+             background-color: rgb(0,0,255);
+         }
+
+
+
+
+
+      
+
+        </style>
+
+</head>
+<body>
+    <!-- navigation -->
+    <div class="nav-container">
+    <ul class="nav">
+    <li><a href=""> Erscott's Hole </a></li>
+    <li><a href=""> Admiralty Islands </a></li>
+    <li><a href=""> Blinky's Beach </a></li>
+    </ul>
+    </div>
+
+    <!-- title block -->
+    <h1>Lord Howe Island</h1>
+        <h4>A World-Heritage listed site, Lord Howe Island is only a 2 hour flight from Sydney and is home to exotic wildlife and breathtaking natural attractions</h4>
+        <h4>Lord Howe Island is Just Paradise. <br>
+        Immerse yourself in the spectacular surroundings and experience some of the world’s best day hikes, snorkelling on the coral reef, hand-feeding fish on Ned’s Beach and much more. </h4>
+        <hr/>
+    <!-- section title -->
+    <h2>Places</h2>
+    <!--sub section one -->
+   
+<div class = "main-box">
+    <div><h2>Places</h2></div>
+    <div class = "col">
+    <h3>Erscott’s Hole</h3>
+<a href="images/coral_sized.jpg" target=_blank>
+    <img class="img-responsive img-padded" src="images/coral_sized.jpg"  alt="This is an image of coral">
+    </a>
+    <div class="caption">Underwater view of the coral reef</div>
+    <p>Home to 500 fish species and 90 species of coral, 
+    Lord Howe’s snorkelling is second to none.<br/>
+    A luxuriant garden of Staghorn coral dominates the iconic 
+    snorkelling destination that is Erscott’s Hole, 
+    a natural wonder within a protected intertidal groyne. </p>
+</div>
+   
+  
+     <!--sub section two -->
+     <div class = "col">   
+    <h3>Admiralty Islands</h3>
+    <a href="images/admiralty_islands_sized.jpg" target=_blank>
+    <img  class="img-responsive img-padded" src="images/admiralty_islands_sized.jpg"  alt="Three small islands see from the beach">
+    </a>
+    <div class="caption">View of Islands seen from the beach</div>
+    <p>Just 15 minutes by boat from Lord Howe rests an intriguing group of 
+        volcanic formations, dubbed the Admiralty Islands. 
+        Large pinnacles, coral reefs, larger schools of fish and 
+        diving depths of 15-40 metres characterise the islands.<br>
+        Eager divers flock to this area.</p>
+    </div>
+       
+     <!--sub section three -->
+     <div class = "col">
+    <h3>Blinky’s Beach</h3>
+    <a href="images/blinkys_beach_sized.jpg" target=_blank>
+    <img  class="img-responsive img-padded" src="images/blinkys_beach_sized.jpg"  alt="View of an empty surf beach">
+    </a>
+    <div class="caption">View of Blinkey's Beach</div>
+    <p>Keen surfers and body boarders head to Blinky Beach to experience 
+        what the locals have dubbed ‘Champagne Surf’.<br>
+        Located on the island’s east side, the beach is the most 
+        popular place to catch a ride on some of Australia’s least crowded waves.</p>
+    </div>
+    
+    </div>  
+       
+    <!--footer -->
+    <footer>&copy; Paul Khouri</footer> 
+</body>
+</html>
