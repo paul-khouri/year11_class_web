@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+        <meta charset='UTF-8'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lord Howe Island - Columns</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet"> 
+        <style>
+            .header-box{
+                width: 100%;
+                border: 2px solid pink;
+                background-color: rgb(170, 170, 170);
+                overflow: hidden;
+
+            }
+            .header{
+                border: 1px solid blue;
+                box-sizing: border-box;
+                width:50%;
+                float: left;
+                text-align: center;
+            }
+
+            .nav-container{
+             /*background-color: rgb(0,0,0);*/
+             width:50%;
+             text-align: right;
+             box-sizing: border-box;
+             border: 1px solid orange;
+             float: left;
+             margin-top: 1em;
+            
+
+       
+         }
+
+
+
+         .nav{
+             list-style: none;
+             margin:0;
+             padding:0;
+             /*
+             text-align: center;
+             */
+         }
+
+         .nav li{ 
+            display:inline;
+             
+         }
+         .nav li a{
+             display:inline-block;
+             border-bottom: 1px dashed rgb(255,255,255);
+             padding: 1em 2em;
+            
+          
+         }
+         /* pseudo classes*/
+         a:link{
+             text-decoration: none;
+             color: rgb(255,255,255);
+         }
+         a:visited{
+            color: rgb(255,255,255);
+         }
+         a:hover{
+             background-color: rgba(7, 64, 187, 0.5);
+         }
+
+         @media only screen and (max-width: 1000px) {
+            .header{
+                width: 100%;
+            }
+            .nav-container{
+                width:100%;
+                margin-top: 0;
+            }
+         }
+             </style>
+             </head>
+             <body>
+                 <div class="header-box">
+                    <div class="header">
+                        <h1>South Island Valleys and Lakes</h1>
+                    </div>
+            
+               
+                <!-- navigation -->
+                <div class="nav-container">
+                <ul class="nav">
+                <li><a href=""> Erscott's Hole </a></li>
+                <li><a href=""> Admiralty Islands </a></li>
+                <li><a href=""> Blinky's Beach </a></li>
+                </ul>
+                </div>
+                 </div>
+
+             </body>
+</html>
