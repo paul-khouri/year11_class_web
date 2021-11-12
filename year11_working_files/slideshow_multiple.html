@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+  <title>Slideshow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.mainbox{
+    /* controls whether borders push out from width or push in */
+        box-sizing: border-box;
+        border: 0px solid rgb(0, 100,0);
+        background-color: rgb(100,45, 255);
+        color: rgb(255, 255, 255);
+        max-width: 900px;
+        margin: auto;   
+        margin-bottom: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+}
+
+/* you need these styles below */
+.slides-box{
+    position: relative;
+    background-color: dodgerblue;
+    overflow: visible;
+    width:80%;
+    margin: auto;
+  
+}
+
+.slide{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    width:100%;
+    transition: opacity 1s;
+}
+
+.slide-button{
+    width:20px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: aqua;
+    color: blueviolet;
+}
+
+.dot{
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 10px;
+    transition: background-color 2s;
+}
+.dot:hover{
+    cursor: pointer;
+   outline:10px solid orangered;
+   outline-offset: -10px;
+}
+/* end of needed styles */
+</style>
+</head>
+<body>
+
+  <div class="mainbox">  
+      <div style="height:50px;"></div>  
+<!-- this is the start of the slideshow -->   
+<!-- All images need to be formatted to the same dimensions --> 
+<!-- Note that the first image is used twice , the first one sets the size of the slideshow box -->        
+    <div class="slides-box" id="slides-box_one">
+        <!--the first image used to set the size of the box -->
+        <img  style="width:100%;" src="images/slide_image_one.jpg">
+        <!-- the four slide show images -->
+        <img class="slide" src="images/slide_image_one.jpg">
+        <img class="slide" src="images/slide_image_two.jpg">
+        <img class="slide" src="images/slide_image_three.jpg">
+        <img class="slide" src="images/slide_image_four.jpg">
+    </div>
+   <div class="slides-box" id="dot-box_one">
+        <div style="text-align: center;">
+        <!-- the dots to click through , four dots for four images  -->
+        <!-- so six images would have six dots  -->
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+</div>
+
+<!-- this is the start of the slideshow -->   
+<!-- All images need to be formatted to the same dimensions --> 
+<!-- Note that the first image is used twice , the first one sets the size of the slideshow box -->        
+<div class="slides-box" id="slides-box_two">
+    <!--the first image used to set the size of the box -->
+    <img  style="width:100%;" src="images/slide_image_one.jpg">
+    <!-- the four slide show images -->
+    <img class="slide" src="images/slide_image_one.jpg">
+    <img class="slide" src="images/slide_image_two.jpg">
+    <img class="slide" src="images/slide_image_three.jpg">
+    <img class="slide" src="images/slide_image_four.jpg">
+</div>
+<div class="slides-box" id="dot-box_two">
+    <div style="text-align: center;">
+    <!-- the dots to click through , four dots for four images  -->
+    <!-- so six images would have six dots  -->
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+
+<div class="slides-box" id="slides-box_three">
+    <!--the first image used to set the size of the box -->
+    <img  style="width:100%;" src="images/slide_image_one.jpg">
+    <!-- the four slide show images -->
+    <img class="slide" src="images/slide_image_one.jpg">
+    <img class="slide" src="images/slide_image_two.jpg">
+    <img class="slide" src="images/slide_image_three.jpg">
+    <img class="slide" src="images/slide_image_four.jpg">
+</div>
+<div class="slides-box" id="dot-box_three">
+    <div style="text-align: center;">
+    <!-- the dots to click through , four dots for four images  -->
+    <!-- so six images would have six dots  -->
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+<!-- this is the script that runs the slideshow -->
+   <script>
+       // slideshow 
+       var slide_set=["slides-box_one", "slides-box_two", "slides-box_three"];
+       var dot_set = ["dot-box_one","dot-box_two", "dot-box_three"];
+       var dots=[];
+       var inner_slides=[];
+       var slide_counter = [];
+       var num_slides = [];
+       var current_index = []
+       for(let i=0; i<slide_set.length; i++){
+        inner_slides[i] = document.getElementById(slide_set[i]).querySelectorAll(".slide");
+        dots[i] = document.getElementById(dot_set[i]).querySelectorAll(".dot");
+        slide_counter[i] = 0;
+        num_slides[i]= inner_slides[i].length;
+        current_index[i]=0
+
+                //initial state
+        // set first image to visible
+        inner_slides[i][0].style.opacity="1";
+        // set active color
+        dots[i][0].style.backgroundColor="rgb(250,250,100)";
+        // add interactivity to each of the dots
+        for(var j=0; j<num_slides[i]; j++ ){
+        dots[i][j].addEventListener('click', moveSlide);
+        //console.log(dots[i][j] + "event added");
+        }
+
+       }
+   
+
+    
+       
+       
+
+        
+      
+        function moveSlide(e){
+            //console.log(dots.index(this));
+            // get the index position of the clicked dot
+            //slide_index = getIndex(this);
+            //console.log(this);
+            //get i, j index  of the clicked dot,
+            //use idex i to target the appropriate slide show.
+            let d = find_dot(this)
+            let i=d[0]
+            let j=d[1]
+            //console.log(find_dot(this))
+          
+            // set current slide dot to neutral
+             dots[i][current_index[i]%num_slides[i]].style.backgroundColor="rgb(200,200,200)";
+            // set current slide to opacity 0;
+             inner_slides[i][current_index[i]%num_slides[i]].style.opacity="0";
+            // update current index 
+            current_index[i] = j;
+             // set the clicked slide dot to active
+             dots[i][ current_index[i]%num_slides[i]].style.backgroundColor="rgb(250,250,0)";
+            // set new slide to opacity 1;
+             inner_slides[i][current_index[i]%num_slides[i]].style.opacity="1";
+       
+           
+        }
+
+        function find_dot(d){
+            for(let i=0; i<dots.length; i++){
+                for(let j = 0; j<dots[i].length ; j++){
+                    //console.log(dots[i][j]);
+                    
+                    if(dots[i][j] == d){
+                        //find which dots set and then the index in that
+                       return [i,j];
+                    }
+
+                }
+            }
+        }
+        
+        function getIndex(a){
+            for(var i=0; i< num_slides; i++){
+                if(dots[i]  == a){
+                    //console.log(i);
+                    return i;
+                }
+            }
+            
+            
+        }
+   </script>
+<!-- end of slideshow -->
+
+
+<div style="height:50px;"></div>  
+
+  </div>
+
+
+</body>
+</html>

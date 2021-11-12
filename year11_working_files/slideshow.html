@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+  <title>Slideshow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.mainbox{
+    /* controls whether borders push out from width or push in */
+        box-sizing: border-box;
+        border: 0px solid rgb(0, 100,0);
+        background-color: rgb(100,45, 255);
+        color: rgb(255, 255, 255);
+        max-width: 900px;
+        margin: auto;   
+        margin-bottom: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5);
+}
+
+/* you need these styles below */
+.slides-box{
+    position: relative;
+    background-color: dodgerblue;
+    overflow: visible;
+    width:80%;
+    margin: auto;
+  
+}
+
+.slide{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    width:100%;
+    transition: opacity 1s;
+}
+
+.slide-button{
+    width:20px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: aqua;
+    color: blueviolet;
+}
+
+.dot{
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 10px;
+    transition: background-color 2s;
+}
+.dot:hover{
+    cursor: pointer;
+   outline:10px solid orangered;
+   outline-offset: -10px;
+}
+/* end of needed styles */
+</style>
+</head>
+<body>
+
+  <div class="mainbox">  
+      <div style="height:50px;"></div>  
+
+
+<!-- this is the start of the slideshow -->   
+<!-- All images need to be formatted to the same dimensions --> 
+<!-- Note that the first image is used twice , the first one sets the size of the slideshow box -->        
+    <div class="slides-box" id="slides-box">
+        <!--the first image used to set the size of the box -->
+        <img  style="width:100%;" src="images/slide_image_one.jpg">
+        <!-- the four slide show images -->
+        <img class="slide" src="images/slide_image_one.jpg">
+        <img class="slide" src="images/slide_image_two.jpg">
+        <img class="slide" src="images/slide_image_three.jpg">
+        <img class="slide" src="images/slide_image_four.jpg">
+    </div>
+   <div class="slides-box" id="dot-box">
+        <div style="text-align: center;">
+        <!-- the dots to click through , four dots for four images  -->
+        <!-- so six images would have six dots  -->
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+</div>
+<!-- this is the script that runs the slideshow -->
+   <script>
+       // slideshow
+       var inner_slides = document.getElementById("slides-box").querySelectorAll(".slide");
+        var dots = document.getElementById("dot-box").querySelectorAll(".dot");
+        console.log(dots);
+    
+        slide_counter = 0;
+        num_slides= inner_slides.length;
+        //initial state
+        // set first image to visible
+        inner_slides[0].style.opacity="1";
+        // set active color
+        dots[0].style.backgroundColor="rgb(250,250,100)";
+        // add interactivity to each of the dots
+        for(var i=0; i<num_slides; i++ ){
+        dots[i].addEventListener('click', moveSlide);
+        }
+        
+       var current_index = 0;
+        function moveSlide(e){
+            //console.log(dots.index(this));
+            // get the index position of the clicked dot
+            slide_index = getIndex(this);
+            // set current slide dot to neutral
+             dots[current_index%num_slides].style.backgroundColor="rgb(200,200,200)";
+            // set current slide to opacity 0;
+             inner_slides[current_index%num_slides].style.opacity="0";
+            // update current index 
+            current_index = slide_index;
+             // set the clicked slide dot to active
+             dots[ current_index%num_slides].style.backgroundColor="rgb(250,250,0)";
+            // set new slide to opacity 1;
+             inner_slides[current_index%num_slides].style.opacity="1";
+           
+        }
+        
+        function getIndex(a){
+            for(var i=0; i< num_slides; i++){
+                if(dots[i]  == a){
+                    console.log(i);
+                    return i;
+                }
+            }
+            
+            
+        }
+   </script>
+<!-- end of slideshow -->
+
+
+<div style="height:50px;"></div>  
+
+  </div>
+
+
+</body>
+</html>
