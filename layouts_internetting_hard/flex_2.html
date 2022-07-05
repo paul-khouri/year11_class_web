@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Flex 2</title>
+    <link rel='stylesheet' href='styles.css'/>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+.menu-container{
+display:flex;
+justify-content: center;
+color: #fff;
+background-color: #5995DA; /*Blue*/
+padding: 20px 0;
+}
+.menu{
+display:flex;
+justify-content: space-between;
+border: 1px solid #fff;
+width:900px;
+}
+.links{
+border: 1px solid #fff;
+display: flex;
+justify-content: flex-end;
+}
+.login{
+margin-left: 20px;
+}
+
+
+
+.photo-grid-container{
+display: flex;
+justify-content: center;
+background-color: bisque
+}
+.photo-grid{
+max-width:900px;
+display: flex;
+justify-content: flex-start;
+background-color: black;
+/*outline: 2px solid white;*/
+flex-wrap: wrap;
+justify-content: center;
+/*flex-direction: column;*/
+flex-direction: row-reverse;
+align-items: center;
+}
+    
+.photo-grid-item{
+outline: 1px solid blue;
+outline-offset: -2px;
+padding:10px;
+background-color: aliceblue;
+max-width: 100%;
+flex:1;
+}
+img{
+display: block;
+opacity:1;
+max-width: 100%;
+}
+
+    
+.footer {
+display: flex;
+justify-content: space-between;
+}
+.footer-item {
+border: 1px solid #fff;
+background-color: #D6E9FE;
+height: 200px;
+flex: 1;
+    
+}
+.footer-three{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+flex:2;
+
+}
+    .pg-two img{
+        max-width:430px;
+       
+    }
+    .pg-two .photo-grid-item{
+        display: flex;
+        background-color: green;
+        justify-content: center;
+    }
+    
+@media (max-width: 900px) {
+    .photo-grid-item{
+    flex:none;
+    }
+
+}
+      </style>
+  </head>
+  <body>
+    <div class='menu-container'>
+      <div class='menu'>
+        <div class='date'>Aug 14, 2016</div>
+          <div class='links'>
+        <div class='signup'>Sign Up</div>
+        <div class='login'>Login</div>
+              </div>
+      </div>
+    </div>
+      
+
+      
+<div class='photo-grid-container'>
+<div class='photo-grid'>
+<div class='photo-grid-item first-item'><img src='images/whanganui.jpg'/></div>
+<div class='photo-grid-item'><img src='images/harakeke.jpg'/></div>
+<div class='photo-grid-item'><img src='images/leuvencorner.jpg'/></div>
+</div>
+</div>
+
+<div class='photo-grid-container'>
+<div class='photo-grid pg-two'>
+<div class='photo-grid-item first-item'><img src='images/whanganui.jpg'/></div>
+<div class='photo-grid-item'><img src='images/harakeke.jpg'/></div>
+<div class='photo-grid-item'><img src='images/leuvencorner.jpg'/></div>
+<div class='photo-grid-item'><img src='images/one.svg'/></div>
+<div class='photo-grid-item'><img src='images/two.svg'/></div>
+<div class='photo-grid-item'><img src='images/three.svg'/></div>
+</div>
+</div>
+
+      <div class='footer'>
+  <div class='footer-item footer-one'></div>
+  <div class='footer-item footer-two'></div>
+  <div id="imList" class='footer-item footer-three'> 4</div>
+</div>
+<div class='footer'>
+  <div class='footer-item footer-one'></div>
+  <div class='footer-item footer-two'></div>
+  <div id="imList" class='footer-item footer-three'> 4</div>
+</div>
+      <style>
+          .flex-container{
+              display:flex;
+              flex-direction: row;
+              
+            }
+          .flex-item{
+              padding:10px;
+              
+          }
+      
+      </style>
+      
+      <div class='photo-grid-container'>
+          <div class = "flex-container">
+              <div class="flex-item"><img src='images/harakeke.jpg'/>
+              </div>
+               <div class="flex-item"><img src='images/leuvencorner.jpg'/>
+              </div>
+          
+          
+          </div>
+          </div>
+      
+      
+      
+      
+      <script>
+          let img = new Image()
+          img.src = 'images/leuvencorner.jpg'
+          let str = img.src
+          console.log(img.src)
+          console.log(str.lastIndexOf("."))
+          console.log(str.lastIndexOf("/"))
+          console.log(str.substring( str.lastIndexOf("/"), str.lastIndexOf("g") + 1) )
+          let imgArray = new Array();
+          let x = document.getElementsByTagName('img');
+          img_listing = ""
+         for(let i=0; i<x.length ; i++){
+             let image = x[i]
+             img = new Image()
+             img.src = image.src
+             output = image.src+ ", " + image.width + "," + image.height;
+              console.log(output)
+             output = img.src+ ", " + img.width + "," + img.height;
+             console.log(output)
+             
+         }
+      </script>
+  </body>
+</html>

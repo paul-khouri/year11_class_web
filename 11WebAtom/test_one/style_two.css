@@ -1,0 +1,160 @@
+:root{
+  --main-bg-color: #dcc7aa;
+  --box-bg-color: #f7882f;
+  --darkest-color: #6B7A8F;
+  --main-text: #ffffff;
+  --set-grey: #f7c331;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", "Arial", sans-serif;
+
+}
+body{
+  color: var(--main-text);
+  background-color: var(--darkest-color);
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+}
+
+.page{
+  margin: 0 auto;
+  background-color: var(--box-bg-color);
+  overflow: hidden;
+
+}
+.menu{
+  background-color: var(--darkest-color);
+}
+.feature-box{
+  background-color: var(--darkest-color);
+  padding: 5px;
+  text-align: center;
+}
+.content-block{
+  border: 1px solid green;
+  margin-bottom: 20px;
+
+
+}
+.content{
+    float: left;
+}
+
+.feature-image{
+  border: 1px solid blue;
+  width: 200px;
+  height: 200px;
+  margin-right: auto;
+  margin-bottom: 5px;
+  border-radius: 100px;
+}
+.article-image{
+  border: 1px solid blue;
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+
+}
+
+.sidebar{
+    background-color: var(--box-bg-color);
+
+}
+.content{
+    background-color: var(--main-bg-color);
+}
+
+
+.footer{
+      background-color: var(--darkest-color);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      clear:both;
+
+}
+.footersmall{
+    background-color: var(--box-bg-color);
+    clear:both;
+}
+/* --------- nav ----------------------*/
+.nav li{
+  display: block;
+  background-color: var(--box-bg-color);
+}
+
+.nav li a{
+  text-decoration: none;
+  color: var(--main-text);
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px dashed  var(--main-bg-color);  /* feather */
+  display: block;
+}
+
+a:hover{
+  color: #ffffff;
+  background-color: var(--darkest-color);  /* feather */
+}
+
+/*------------- Button ---------------*/
+.button:link , .button:visited{
+  color: #FFF;
+  background-color: var(--main-bg-color); /* feather */
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  width:200px;
+  margin: 20px auto;
+  display: block;
+}
+
+.button:hover{
+  background-color: var(--darkest-color); /* marine */
+}
+
+.button:active{
+  background-color: #57BCff; /* bright blue */
+}
+
+@media only screen and (min-width: 900px) {
+
+.page{
+  max-width:900px;
+}
+
+.feature-box{
+  width: 31%;
+  margin: 1.15%;
+  float: left;
+}
+
+.content-block{
+ overflow:hidden;
+}
+
+.sidebar{
+  width:20%;
+  float: left;
+}
+
+.content{
+   width:80%;
+}
+
+p{
+  overflow: hidden;
+}
+
+
+}

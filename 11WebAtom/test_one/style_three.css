@@ -1,0 +1,190 @@
+:root{
+  --main-bg-color: #dcc7aa;
+  --box-bg-color: #f7882f;
+  --darkest-color: #6B7A8F;
+  --main-text: #ffffff;
+  --set-grey: #f7c331;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", "Arial", sans-serif;
+
+}
+body{
+  color: var(--darkest-color);
+  background-color: var(--darkest-color);
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  font-weight: lighter;
+}
+
+h1,h2, h4{
+  font-weight: lighter;
+
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+h1{
+  padding-top: 30px;
+  font-size: 3em;
+  color: var(--main-text);
+}
+h4{
+  font-size: 2em;
+}
+
+
+.page{
+  margin: 0 auto;
+  background-color: var(--darkest-color);
+  overflow: hidden;
+
+}
+.menu{
+  background-color: var(--darkest-color);
+}
+.feature-box{
+  background-color: var(--darkest-color);
+  color: var(--main-text);
+  padding: 5px;
+  text-align: center;
+
+}
+.content-block{
+
+}
+
+.content-block p{
+  padding-bottom: 10px;
+}
+.content{
+    float: left;
+}
+
+.feature-image{
+
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  margin-bottom: 5px;
+  margin-top:10px;
+
+  border-radius: 100px;
+}
+.article-image{
+
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+
+}
+
+.sidebar{
+    background-color: var(--darkest-color);
+
+}
+.content{
+    background-color: var(--main-bg-color);
+}
+
+
+.footer{
+      background-color: var(--darkest-color);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      overflow: hidden;
+      clear:both;
+
+}
+.footersmall{
+    background-color: var(--darkest-color);
+    clear:both;
+}
+/* --------- nav ----------------------*/
+.nav li{
+  display: block;
+
+  background-color: var(--darkest-color);
+}
+
+.nav li a{
+  text-decoration: none;
+  color: var(--main-text);
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-left: 2em;
+  border-bottom: 1px dashed  var(--main-bg-color);  /* feather */
+  display: block;
+    font-size: 1em;
+}
+
+a:hover{
+  color: #ffffff;
+  background-color: var(--box-bg-color);  /* feather */
+}
+
+/*------------- Button ---------------*/
+.button:link , .button:visited{
+  color: #FFF;
+  background-color: var(--main-bg-color); /* feather */
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  width:200px;
+  margin: 20px auto;
+  display: block;
+
+}
+
+
+.button:hover{
+  background-color: var(--darkest-color); /* marine */
+}
+
+.button:active{
+  background-color: #57BCff; /* bright blue */
+}
+
+@media only screen and (min-width: 900px) {
+
+.page{
+  max-width:1000px;
+}
+
+.feature-box{
+  width: 31%;
+  margin: 1.15%;
+  float: left;
+}
+
+.content-block{
+ overflow:hidden;
+}
+
+.sidebar{
+  width:20%;
+  float: left;
+}
+
+.content{
+   width:80%;
+}
+
+p{
+  overflow: hidden;
+}
+
+
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Slideshow 3</title>
+<style>
+body{
+margin: 0;
+font-family: sans-serif;
+}
+
+.mainbox{
+box-sizing: border-box;
+border: 2px solid rgb(0,100,0);
+background-color: rgb(100,45,255);
+color: rgb(255,255,255);
+max-width: 500px;
+margin:auto;
+margin-bottom: 10px;
+box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.5);
+}
+.slides-box{
+position:relative;
+background-color: dodgerblue;
+overflow:hidden;
+width:80%;
+margin:auto;
+}
+.slide{
+position: absolute;
+top:0;
+left:0%;
+opacity: 1;
+width:100%;
+display: block;
+transition-timing-function: ease-in;
+
+}
+
+
+.dot{
+height: 25px;
+width: 25px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+margin: 5px 10px;
+transition: background-color 2s;
+}
+.dot:hover{
+cursor: pointer;
+outline:4px solid orangered;
+outline-offset: -4px;
+}   
+
+</style>
+      
+</head>
+<body>
+        
+<div class="mainbox">
+<div style="height:50px;"></div>  
+            <!-- this is the start of the slideshow -->   
+<!-- All images need to be formatted to the same dimensions --> 
+<!-- Note that the first image is used twice , the first one sets the size of the slideshow box -->        
+<div class="slides-box" id="slides-box" style="background-color: black;">
+<img  style="width:100%; opacity: 0; display: block;" src="images/harakeke.jpg">
+<img class="slide" src="images/leuvencorner.jpg">
+<img class="slide" src="images/whanganui.jpg">
+<img class="slide" src="images/harakeke.jpg">
+<img class="slide" src="images/bnz.jpg">
+</div>
+            
+<div class="slides-box" id="dot-box">
+<div style="text-align: center;">
+<!-- the dots to click through , four dots for four images  -->
+<!-- so six images would have six dots  -->
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+</div>
+            
+<div style="height:50px;"></div>  
+<script>
+//let inner_slides = document.querySelector(".slides-box").querySelectorAll(".slide");
+let inner_slides = document.querySelectorAll("img.slide");
+let dots = document.getElementById("dot-box").querySelectorAll(".dot");
+console.log(dots);
+slide_counter = 0;
+num_slides= inner_slides.length;
+
+// add interactivity to each of the dots
+for(var i=0; i<num_slides; i++ ){
+dots[i].addEventListener('click', moveSlide);
+}
+let off_transition ="opacity 0s, left 0s"
+let on_transition = "opacity 1s, left 1s"
+    
+for(let i=0; i<num_slides; i++){
+inner_slides[i].style.left="100%";  
+inner_slides[i].style.opacity="0"; 
+inner_slides[i].style.transition=off_transition; 
+inner_slides[i].addEventListener('transitionend', () =>{
+    let name = inner_slides[i]
+    let index = i;
+    console.log("transition end")
+    console.log(name)
+    console.log(i)
+    console.log(current_index);
+    console.log(slide_index);
+    if( i!= slide_index){
+        name.style.transition=off_transition;
+        name.style.left="100%";
+        
+    }
+});
+    
+}
+    
+let current_index = 0;
+let slide_index = 0;
+inner_slides[0].style.opacity="1";
+inner_slides[0].style.left="0px";
+dots[0].style.backgroundColor="rgb(250,250,100)";
+
+function moveSlide(e){
+//console.log(dots.index(this));
+// get the index position of the clicked dot
+slide_index = getIndex(this);
+// set current slide dot to neutral
+dots[current_index%num_slides].style.backgroundColor="rgb(200,200,200)";
+const s = getComputedStyle(inner_slides[current_index%num_slides])
+console.log(s.transition)
+console.log(inner_slides[current_index%num_slides].style)
+// set current slide to opacity 0;
+console.log("transition called")
+console.log(inner_slides[current_index%num_slides])
+inner_slides[current_index%num_slides].style.transition=on_transition;
+inner_slides[current_index%num_slides].style.opacity="0";
+inner_slides[current_index%num_slides].style.left="-100%";
+
+
+// set the clicked slide dot to active
+dots[ slide_index%num_slides].style.backgroundColor="rgb(250,250,0)";
+// set new slide to opacity 1;
+console.log("transition called")
+console.log(inner_slides[slide_index%num_slides])
+inner_slides[slide_index%num_slides].style.transition=on_transition;
+inner_slides[slide_index%num_slides].style.opacity="1";
+inner_slides[slide_index%num_slides].style.left="0%";
+
+
+
+// update current index 
+current_index = slide_index;  
+}
+
+function getIndex(a){
+    for(var i=0; i< num_slides; i++){
+        if(dots[i]  === a){
+        //console.log(i);
+        return i;
+    }
+}  
+}
+
+    
+    </script>
+  </div>
+      
+    </body>
+</html>
