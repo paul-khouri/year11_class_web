@@ -187,11 +187,15 @@ flex:2;
              let image = x[i]
              img = new Image()
              img.src = image.src
+             img.addEventListener('load', loader)
              output = image.src+ ", " + image.width + "," + image.height;
               console.log(output)
              output = img.src+ ", " + img.width + "," + img.height;
              console.log(output)
              
+         }
+         function loader(e){
+             console.log(this.width)
          }
       </script>
   </body>
