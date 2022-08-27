@@ -1,14 +1,39 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html lang="en">
 <head>
     <meta charset="UTF-8"> 
-  <title>Sticky 4</title>
+  <title>Picture Collection</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600&display=swap');
+
     body{
       margin: 0;
       font-family: serif;
         font-size: 100% ;
+        font-family: 'Source Serif Pro', serif;
+    }
+    h2{
+        font-size: 3em;
+        text-align: center;
+        border: 0px solid green;
+        margin:2em 0 1em 0;
+        background: url("backsquare.svg");
+        background-size: auto 0.05em;
+        background-repeat: repeat-x;
+        background-position: center;
+        /* fix for going under sticky nav */
+        scroll-margin-top: 1em;
+
+
+    }
+    h2 span{
+        background: #fff;
+        padding-left: 1em;
+        padding-right: 1em;
+
     }
     p{
         font-size: 2em;
@@ -18,10 +43,6 @@
     .quote{
         font-size: 1.5em;
     }
-    .main-box{
-        max-width: 1000px;
-        margin:2.2em auto;
-    }
 
     .placement {
         position:fixed;
@@ -29,6 +50,17 @@
         top: 0;
         padding: 0;
         z-index: 1;
+    }
+
+    .main-box{
+        max-width: 1000px;
+        margin:auto;
+    }
+
+    .banner{
+        border: 0px solid blue;
+        margin-top: 3em;
+
     }
 
     .sticky {
@@ -42,7 +74,7 @@
     .big-box{
         width: 100%;
         background-color: rgb(255,255,255);
-        border: 4px solid #d2d2d2;
+        border: 0px solid #d2d2d2;
         box-sizing: border-box;
         overflow: hidden;
     }
@@ -58,10 +90,12 @@
     }
 
     .img-responsive{
-
         max-width: 100%;
-
         display:block;
+    }
+    .img-banner{
+        width:100%;
+        display: block;
     }
     .img_hov{
       outline-width: 12px;
@@ -220,13 +254,16 @@
     }
 
 /* ----- margin fix for bookmarks ------ */
+    /*
     .jump-target::before {
         content: "";
         display: block;
         height: 2em;
         margin: -2em 0 0 0;
-        border: 0px solid blue;
+        border: 2px solid blue;
     }
+     */
+
 </style>
 </head>
 <body>
@@ -244,8 +281,11 @@
           </div>
             </li><li><a href="#map">Map</a> </li>
         </ul>
+
     </div>
+    <div class="banner"><img class="img-banner" src="banner.svg" alt="banner image"></div>
     <script>
+        // colour nav on scroll
              // event listener for scroll height
              window.addEventListener('scroll', scroller);
              let p= document.getElementsByClassName("nav");
@@ -267,6 +307,7 @@
     <div class= "main-box">
 <!-- ***** tekapo ****** -->
         <div class="gallery">
+            <h2><span>Tekapo</span></h2>
 
         <div class="big-box" style= "margin:2.5% 0;">
             <img class="img-responsive" src="images/tekapo.jpg" alt="filler">
@@ -295,7 +336,7 @@
 
 
 <!-- body -->
-        <h2 id="quote" class="jump-target">Long Quote</h2>
+        <h2 id="quote" class="jump-target"><span>Long Quote</span></h2>
 <p class="quote">What should he regret? He had recognised no other
     virtue than intelligence, and had erected passions into duties.
     Both his intelligence and his passion were swallowed up easily
@@ -303,8 +344,10 @@
     seven hours in the seven days. His sadness was the sadness of
     a sceptical mind. He beheld the universe as a succession of
     incomprehensible images.</p>
-<h2 id="gallery" class="jump-target">Gallery</h2>
+
+<h2 id="gallery" class="jump-target"><span>Gallery</span></h2>
         <div  class="gallery">
+            <div class="big-box"><img class="img-responsive" src="images/buiding_near_station.jpg" alt="filler"></div>
         <!-- ******************  -->
         <div class="big-box">
             <div class="three-col">
@@ -364,7 +407,7 @@
         <!-- end of gallery class -->
         </div>
 
-        <h2 id="formalism" class="jump-target">Formalism</h2>
+        <h2 id="formalism" class="jump-target"><span>Formalism</span></h2>
         <div class="big-box gallery">
             <div class="three-col">
                 <img class="img-responsive" src="images/green_shelter_1.jpg" alt="filler">
@@ -388,43 +431,51 @@
             </div>
         </div>
         <!--- image data div -->
-        <h2 id="data" class="jump-target">Image data</h2>
+        <h2 id="data" class="jump-target"><span>Image data</span></h2>
         <div id="output"></div>
         <style>
             .lightbox-container{
                 position: fixed;
-
                 top:0;
                 left:0;
                 width: 100%;
                 height: 100%;
-                background-color: rgb(0,0,0,1);
+                /*background-color: rgb(0,0,0,1);*/
                 z-index: 2;
                 display: flex;
                 visibility: hidden;
                 opacity:0;
-                transition: opacity 0.5s;
+                transition: opacity 1.0s;
+                align-items: flex-start;
+                background: url("hicks_tile.svg");
+                background-size: 100px;
+                background-blend-mode: multiply;
             }
             .lightbox-image-container{
                 box-sizing: border-box;
-                border:2px solid red;
+                border:0px solid red;
                 margin: auto;
                 max-width: 80%;
             }
             .lightbox-image-container img{
                 display: block;
                 box-sizing: border-box;
-
-
-                border: 20px solid green;
+                border: 20px solid rgba(255,255,255,1);
                 max-width: 100%;
-
                 max-height: 90vh;
-
+            }
+            .close-bar{
+                text-align: right;
+                height:3em;
+                background-color: black;
+                color:white;
             }
         </style>
         <div class="lightbox-container">
-            <div class="lightbox-image-container"><img id="lightboxImage" src="images/green_shelter_1.jpg"></div>
+            <div class="lightbox-image-container">
+                <!-- <div class="close-bar"> Bar</div> -->
+                <img id="lightboxImage" src="images/green_shelter_1.jpg">
+            </div>
         </div>
         <script>
             let  lightbox = document.querySelectorAll(".lightbox-container")[0];
@@ -480,8 +531,8 @@
         </script>
 
 
-        <h2 id="map" class="jump-target">Map Section</h2>
-        <div class="big-box" style="position: relative;">
+        <h2 id="map" class="jump-target"><span>Map Section</span></h2>
+        <div class="big-box" style="position: relative; margin-top: 2em;">
             <iframe id="mapframe" src="https://www.google.com/maps/d/embed?mid=1LfzjqSyErvRCSbwWfP6TTJp_whC1HND-" width="640" height="480"></iframe>
             <div class="cover" id="cover"> <div class="incover">Click to interact with map</div></div>
         </div>
@@ -503,7 +554,7 @@
         </script>
 
 
-<h2>Layout Tests</h2>
+<h2><span>Layout Tests</span></h2>
 
 <div class="big-box in-line">
   <img class="img-responsive" src="images/4-3.svg" alt="filler">
