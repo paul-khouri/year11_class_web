@@ -112,6 +112,7 @@
         cursor: pointer;
     }
 /* ---- columns ----- */
+    /* basic triple column*/
     .three-col{
         width:30%;
         float:left;
@@ -119,22 +120,26 @@
         padding: 0;
         margin:20px 0 20px 2.5%;
     }
-
+    /* basic double column*/
     .twocol{
         width:45%;
         float:left;
         box-sizing: border-box;
         margin:20px 2.5% 20px 2.5%;
     }
-    .twocoltwo{
-        width:57.6%;
+    /* -- columns for 4:3 and 16:9 images together -- */
+    /* -- columns for vertical 3:4 and horizontal 4:3 images together -- */
+    /* 4:3 */
+    .v-four-three-col{
+        width:32.4%;
         float:left;
         box-sizing: border-box;
         padding: 0;
         margin: 15px 2.5%;
     }
-    .twocolone{
-        width:32.4%;
+    /* 16:9 */
+    .h-four-three-col{
+        width:57.6%;
         float:left;
         box-sizing: border-box;
         padding: 0;
@@ -307,6 +312,38 @@
     <div class= "main-box">
 <!-- ***** tekapo ****** -->
         <div class="gallery">
+            <h2><span>Drawings</span></h2>
+
+            <div class="big-box" style= "margin:2.5% 0;">
+                <div class="v-four-three-col">
+                <img class="img-responsive" src="images/abstract_1.gif" alt="filler">
+                </div>
+                <div class="h-four-three-col">
+                <img class="img-responsive" src="images/kaiwharawhara_stream.gif" alt="filler">
+                </div>
+            </div>
+
+            <div class="big-box" style= "margin:2.5% 0;">
+                <div class="twocol">
+                    <img class="img-responsive" src="images/flax_clearing_drawing.jpg" alt="filler">
+                </div>
+                <div class="twocol">
+                    <img class="img-responsive" src="images/flax_clearing_colour.jpg" alt="filler">
+                </div>
+            </div>
+
+            <h2><span>Maths</span></h2>
+            <div class="big-box">
+                <div class="three-col">
+                    <img class="img-responsive" src="images/euler_line_1.png" alt="filler">
+                </div>
+                <div class="three-col">
+                    <img class="img-responsive" src="images/euler_line_2.png" alt="filler">
+                </div>
+                <div class="three-col">
+                    <img class="img-responsive" src="images/euler_line_3.png" alt="filler">
+                </div>
+            </div>
             <h2><span>Tekapo</span></h2>
 
         <div class="big-box" style= "margin:2.5% 0;">
@@ -383,19 +420,19 @@
         </div>
         <!-- ******************  -->
         <div class="big-box ">
-            <div class="twocolone" style="width:38.52%;">
+            <div class="v-four-three-col" style="width:38.52%;">
                 <img class="img-responsive" src="images/otari_4-3.jpg" alt="filler">
             </div>
-            <div class="twocoltwo" style="width:51.48%;">
+            <div class="h-four-three-col" style="width:51.48%;">
                 <img class="img-responsive" src="images/otari_16-9.jpg" alt="filler">
             </div>
         </div>
         <!-- ******************  -->
         <div class="big-box ">
-            <div class="twocolone" style="width:51.48%;">
+            <div class="h-four-three-col" style="width:51.48%;">
                 <img class="img-responsive" src="images/whanganui_beach.jpg" alt="filler">
             </div>
-            <div class="twocoltwo" style="width:38.52%;">
+            <div class="v-four-three-col" style="width:38.52%;">
                 <img class="img-responsive" src="images/wadestown_road.jpg" alt="filler">
             </div>
         </div>
@@ -575,19 +612,19 @@
 <div class="jump-target" id="lev2">  Level 2</div>
 <div class="big-box ">
  
-  <div class="twocolone">
+  <div class="v-four-three-col">
   <img class="img-responsive" src="images/1-1.svg" alt="filler">
 </div>
-<div class="twocoltwo">
+<div class="h-four-three-col">
   <img class="img-responsive" src="images/16-9.svg" alt="filler">
 </div>
 </div>
 
 <div class="big-box ">
-<div class="twocolone" style="width:51.48%;">
+<div class="h-four-three-col" style="width:51.48%;">
 <img class="img-responsive" src="images/16-9.svg" alt="filler">
 </div>
-<div class="twocoltwo" style="width:38.52%;">
+<div class="v-four-three-col" style="width:38.52%;">
 <img class="img-responsive" src="images/4-3.svg" alt="filler">
 </div>
 </div>
@@ -598,9 +635,7 @@
 <div class="big-box">
   <img class="img-responsive" src="images/16-9.svg" alt="filler">
 </div>
-<div class="big-box">Level 4</div>
-<div class="big-box">Level 5</div>
-<div class="big-box">Level 6</div>
+
 
 </div>
 </body>
