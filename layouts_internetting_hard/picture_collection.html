@@ -59,7 +59,7 @@
 
     .banner{
         border: 0px solid blue;
-        margin-top: 3em;
+        margin-top: 2em;
 
     }
 
@@ -90,8 +90,15 @@
     }
 
     .img-responsive{
+        max-width: 92.5%;
+        display:block;
+        margin:auto;
+    }
+    .img-responsive-100{
         max-width: 100%;
         display:block;
+        margin:auto;
+        box-sizing: border-box;
     }
     .img-banner{
         width:100%;
@@ -144,6 +151,29 @@
         box-sizing: border-box;
         padding: 0;
         margin:15px 2.5%;
+    }
+    /* on vertical 4:3 then 2 horizontal 4:3  */
+    .left-v {
+        border: 0px solid green;
+        width:52.94%;
+        float:left;
+        box-sizing: border-box;
+
+
+    }
+    .right-v{
+        border: 0px solid pink;
+        width:47.06%;
+        float:left;
+        box-sizing: border-box;
+    }
+    .left-v .img-responsive-100{
+
+        padding: 2.5% 5% 5% 2.5%;
+    }
+    .right-v .img-responsive-100{
+
+        padding: 2.5% 5% 2.5% 5%;
     }
 /* ----- navigation ------ */
     ul{
@@ -312,6 +342,45 @@
     <div class= "main-box">
 <!-- ***** tekapo ****** -->
         <div class="gallery">
+
+            <h2><span>Night</span></h2>
+            <div class="big-box" style= "margin:2.5% 0;">
+                <div class="left-v">
+                    <img class="img-responsive-100" src="images/night_v.jpg" alt="filler">
+
+                </div>
+                <div class="right-v">
+                    <img class="img-responsive-100" src="images/night_h_1.jpg" alt="filler">
+                    <img class="img-responsive-100" src="images/night_h_2.jpg" alt="filler">
+
+                </div>
+
+
+            </div>
+
+            <h2><span>Home</span></h2>
+            <div class="big-box" style= "margin:2.5% 0;">
+                <div class="twocol">
+                    <img class="img-responsive" src="images/window_garden_1.jpg" alt="filler">
+                </div>
+                <div class="twocol">
+                    <img class="img-responsive" src="images/window_garden_2.jpg" alt="filler">
+                </div>
+            </div>
+            
+            <h2><span>Stars</span></h2>
+            <div class="big-box" style= "margin:2.5% 0;">
+                <img class="img-responsive" src="images/scorpio.gif" alt="filler">
+            </div>
+
+            <div class="big-box" style= "margin:2.5% 0;">
+                <div class="twocol">
+                    <img class="img-responsive" src="images/shooting_star.jpg" alt="filler">
+                </div>
+                <div class="twocol">
+                    <img class="img-responsive" src="images/southerncross.gif" alt="filler">
+                </div>
+            </div>
             <h2><span>Drawings</span></h2>
 
             <div class="big-box" style= "margin:2.5% 0;">
@@ -329,6 +398,23 @@
                 </div>
                 <div class="twocol">
                     <img class="img-responsive" src="images/flax_clearing_colour.jpg" alt="filler">
+                </div>
+            </div>
+
+            <div class="big-box" style= "margin:2.5% 0;">
+                <img class="img-responsive" src="images/wakatipu_lake.jpg" alt="filler">
+            </div>
+
+            <h2><span>Skyline</span></h2>
+            <div class="big-box">
+                <div class="three-col">
+                    <img class="img-responsive" src="images/skyline_1.jpg" alt="filler">
+                </div>
+                <div class="three-col">
+                    <img class="img-responsive" src="images/skyline_2.jpg" alt="filler">
+                </div>
+                <div class="three-col">
+                    <img class="img-responsive" src="images/skyline_3.jpg" alt="filler">
                 </div>
             </div>
 

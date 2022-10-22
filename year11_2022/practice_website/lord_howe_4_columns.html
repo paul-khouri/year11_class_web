@@ -168,7 +168,21 @@
    border: 0px solid blue;
 }
 
+video{
+    display: block;
+    max-width: 600px;
+    margin:auto;
+}
+
         </style>
+
+    <div class="main-box">
+        <video controls>
+            <source src="images/digital_media_outcome_video.mp4"
+                    type="video/mp4">
+        </video>
+
+    </div>
 
    
 <div class = "main-box">
@@ -306,10 +320,120 @@
         Located on the island’s east side, the beach is the most 
         popular place to catch a ride on some of Australia’s least crowded waves.</p>
     </div>
+</div>
 
-</div> 
+
+
+    <!-- css slideshow -->
+
+        <style>
+            .slider {
+                width: 60%;
+                /*height: 300px;*/
+                background-color: yellow;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0px;
+                text-align: center;
+                overflow: hidden;
+                position: relative;
+            }
+            .image-container {
+                width: 300%;
+                background-color: pink;
+                /*height: 300px;*/
+                clear: both;
+                position: relative;
+                /*
+                -webkit-transition: left 2s;
+                -moz-transition: left 2s;
+                -o-transition: left 2s;
+                */
+                transition: left 2s;
+            }
+            .slide {
+                float: left;
+                margin: 0px;
+                padding: 0px;
+                position: relative;
+            }
+            /*
+            #slide-1:target ~ .image-container {
+                left: 0px;
+
+            }
+            #slide-2:target ~ .image-container {
+                left: -100%;
+
+            }
+            #slide-3:target ~ .image-container {
+                left: -200%;
+            }
+            */
+
+            .buttons {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%,-100%);
+                z-index: 2;
+            }
+            .buttons a {
+                display: inline-block;
+                height: 15px;
+                width: 15px;
+                border-radius: 50px;
+                background-color: lightgreen;
+            }
+            #slide-1, #slide-2, #slide-3{
+                scroll-margin-top: 7em;
+            }
+
+        </style>
+    <div class = "main-box" style="background-color: green;">
+
+    <div class="slider">
+        <span id="slide-1"></span>
+        <span id="slide-2"></span>
+        <span id="slide-3"></span>
+        <div class="image-container">
+            <img src="images/slide_image_one.jpg" class="slide" style="width:33.33%;"  >
+            <img src="images/slide_image_two.jpg" class="slide" style="width:33.33%;" >
+            <img src="images/slide_image_three.jpg" class="slide" style="width:33.33%;" >
+        </div>
+        <div class="buttons">
+            <a href="#slide-1" ></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+        </div>
+    </div>
+        <script>
+
+            let button_dots  = document.querySelectorAll(".buttons a");
+            let image_container = document.querySelector(".image-container");
+            image_container.style.left= "0";
+            button_dots = Array.from(button_dots)
+            for(let i=0; i < button_dots.length; i++){
+                console.log(button_dots[i])
+                button_dots[i].addEventListener("click", button_function)
+            }
+            function button_function(e){
+                console.log(this.hash);
+                let i = button_dots.indexOf(this)*(-100);
+                image_container.style.left= i+"%";
+                e.preventDefault();
+            }
+
+
+        </script>
+
+    </div>
+
+
+
+
        
     <!--footer -->
-<footer>&copy; Paul Khouri</footer> 
+<footer style="height:800px;">&copy; Paul Khouri</footer>
 </body>
 </html>
