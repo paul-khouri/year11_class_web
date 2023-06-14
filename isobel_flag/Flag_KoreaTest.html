@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+<meta charset="UTF-8">
+<title>Flag Canvas</title>
+<style>
+    canvas{
+        border: 5px solid rgb(200,200,200);
+    }
+</style>
+
+<script>
+
+
+
+ 
+
+
+function korea(){
+
+canvas.clearRect(0,0,600,300);
+canvas.save()
+canvas.translate(400,100)
+canvas.rotate(45*Math.PI/180)
+canvas.fillRect(-25,-15,50,-10);
+canvas.fillRect(-25,15,50,10);
+canvas.beginPath()
+canvas.arc(0, 0, 2, 0, 2 * Math.PI);
+canvas.arc(-15, 0, 5, 0, 2 * Math.PI);
+canvas.arc(15, 0, 5, 0, 2 * Math.PI);
+canvas.fill();
+canvas.restore();
+
+canvas.save()
+canvas.translate(100,100)
+canvas.rotate(-45*Math.PI/180)
+canvas.scale(2,2);
+canvas.fillRect(-25,-15,50,-10);
+canvas.fillRect(-25,15,50,10);
+canvas.beginPath()
+canvas.arc(0, 0, 2, 0, 2 * Math.PI);
+canvas.arc(-15, 0, 5, 0, 2 * Math.PI);
+canvas.arc(15, 0, 5, 0, 2 * Math.PI);
+canvas.fill();
+canvas.restore();
+
+canvas.save()
+canvas.translate(100,200)
+canvas.rotate(45*Math.PI/180)
+canvas.fillRect(-25,-15,50,-10);
+canvas.fillRect(-25,15,50,10);
+canvas.beginPath()
+canvas.arc(0, 0, 2, 0, 2 * Math.PI);
+canvas.arc(-15, 0, 5, 0, 2 * Math.PI);
+canvas.arc(15, 0, 5, 0, 2 * Math.PI);
+canvas.fill();
+canvas.restore();
+
+canvas.save()
+canvas.translate(400,200)
+canvas.rotate(-45*Math.PI/180)
+canvas.fillRect(-25,-15,50,-10);
+canvas.fillRect(-25,15,50,10);
+canvas.beginPath()
+canvas.arc(0, 0, 2, 0, 2 * Math.PI);
+canvas.arc(-15, 0, 5, 0, 2 * Math.PI);
+canvas.arc(15, 0, 5, 0, 2 * Math.PI);
+canvas.fill();
+canvas.restore();
+
+}
+
+function koreaNew(){
+    let bl = "rgb(0,0,255)" ;
+    let rd = "rgb(255,0,0)";
+    canvas.clearRect(0,0,600,300);
+    canvas.fillStyle ="rgba(0,0,0,0.5)"
+    canvas.fillRect(0,0,w/2,h/2)
+    canvas.fillRect(0,0,w/4,h/2)
+
+//three bars
+    canvas.save()
+    canvas.translate(w/4,h/4)
+    canvas.rotate((90+33.69)*Math.PI/180)
+    canvas.scale(10,10);
+    canvas.fillRect(-6,-4,12,2);
+    canvas.fillRect(-6,-1,12,2);
+    canvas.fillRect(-6,2,12,2);
+    //canvas.beginPath()
+    //canvas.arc(0, 0, 2, 0, 2 * Math.PI);
+    //canvas.fill();
+    canvas.restore();
+
+    canvas.save()
+    canvas.translate(w/4,3*h/4)
+    canvas.rotate((90-33.69)*Math.PI/180)
+    canvas.scale(10,10);
+    canvas.fillRect(-6,-4,12,2);
+    canvas.fillRect(-6,-1,5.5,2);
+    canvas.fillRect(0.5,-1,5.5,2);
+    canvas.fillRect(-6,2,12,2);
+    //canvas.beginPath()
+    //canvas.arc(0, 0, 2, 0, 2 * Math.PI);
+    //canvas.fill();
+    canvas.restore();
+
+    canvas.save()
+    canvas.translate(3*w/4,h/4)
+    canvas.rotate((90-33.69)*Math.PI/180)
+    canvas.scale(10,10);
+    canvas.fillRect(-6,-4,5.5,2);canvas.fillRect(0.5,-4,5.5,2);
+    canvas.fillRect(-6,-1,12,2);
+    canvas.fillRect(-6,2,5.5,2);canvas.fillRect(0.5,2,5.5,2);
+    canvas.restore();
+
+    canvas.save()
+    canvas.translate(3*w/4,3*h/4)
+    canvas.rotate((90+33.69)*Math.PI/180)
+    canvas.scale(10,10);
+    canvas.fillRect(-6,-4,5.5,2);canvas.fillRect(0.5,-4,5.5,2);
+    canvas.fillRect(-6,-1,5.5,2);canvas.fillRect(0.5,-1,5.5,2);
+    canvas.fillRect(-6,2,5.5,2);canvas.fillRect(0.5,2,5.5,2);
+    //canvas.beginPath()
+    //canvas.arc(0, 0, 2, 0, 2 * Math.PI);
+    //canvas.fill();
+    canvas.restore();
+
+
+    canvas.save()
+    canvas.translate(w/2,h/2)
+    canvas.rotate(33.69*Math.PI/180)
+    canvas.scale(10,10);
+    canvas.beginPath();
+    canvas.arc(0,0,12, 0, 2*Math.PI)
+    canvas.fillStyle = rd
+    canvas.fill();
+    canvas.beginPath()
+    canvas.arc(6,0,6, 0, -1*Math.PI, true)
+    canvas.arc(-6,0,6, 0, -1*Math.PI, false)
+    canvas.arc(0,0,12,  -1*Math.PI,-2*Math.PI, true)
+    canvas.fillStyle = bl
+    canvas.fill();
+    canvas.beginPath()
+    canvas.arc(0,0,18,  0,-2*Math.PI, true)
+    canvas.lineWidth = 0.1;
+    canvas.stroke();
+
+
+
+    canvas.restore();
+
+
+
+}
+</script>  
+ 
+   
+</head>
+
+<body>
+
+<canvas id="myCanvas" ></canvas>
+<script>
+ //---initialise canvas  
+var canvas=document.getElementById("myCanvas").getContext("2d");
+let w = 720;
+let h = 480;
+canvas.width=w;
+canvas.height=h;
+let c=document.querySelector("#myCanvas");
+c.width=w;
+c.height=h;
+window.onload = (e) => {koreaNew()}
+
+</script>
+
+
+    <div>
+
+    <button onclick="korea()">Korea</button>
+        <button onclick="koreaNew()">Korea New</button>
+    </div>
+
+</body>
+
+</html>
