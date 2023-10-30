@@ -1,0 +1,357 @@
+
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title> Japan Blog - STICKY NAV VERSION</title>
+    
+<style> 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Catamaran:wght@300&family=Outfit:wght@500&family=Red+Hat+Display:wght@300&display=swap');
+/*
+font-family: 'Catamaran', sans-serif;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Noto Sans', sans-serif;
+*/
+
+    body{ 
+        background-color: rgb(white);
+        font-family: Noto Sans;
+        margin: 0;
+        padding: 0;
+        background: url(images/chinese.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% auto;
+    }
+
+    h1{ 
+        font-size: 4rem;
+        /*background-color: rgb(224, 209, 200);*/
+        text-align: center;
+        color: rgb(81, 43, 22);
+        font-family: Outfit;
+    }
+
+    h3{ 
+        text-align: center; 
+        color: rgb(81, 43, 2);
+        font-size: 2rem;
+        font-family: Outfit;
+        scroll-margin-top: 3.5em;
+    }
+
+    h4{ 
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 1.2em;
+        line-height: 1.5em;
+        color: rgb(45,22,8);
+    }
+
+    footer{ 
+        text-align:center; 
+        background-color: rgba(231, 70, 70, 0.3);;
+        padding: 1em; 
+    }
+    
+    /* --- layout ---*/ 
+    .main-box{ 
+        max-width: 1000px;
+        margin: auto; 
+        position: relative;
+        border:0px solid blue; 
+        background-color: white;
+        padding:2em;
+    }
+    .two-colum-box{
+        overflow: hidden;
+    }
+
+    .col-2{ 
+        width: 50%; 
+        box-sizing: border-box; 
+        float:left; 
+        position: relative; 
+        padding: 1rem; 
+
+    }
+
+    /*--- images ---*/
+    .img-responsive{ 
+        max-width: 100%; 
+        display: block; 
+        margin: auto;
+    }
+
+    /* image hover titles*/ 
+     .container {
+        position: relative;
+        width: 100%;
+        /*max-width: 300px;*/
+    }
+    
+    .overlay {
+        position: absolute; 
+        bottom: 45%; 
+        background: rgb(0, 0, 0);
+        background: rgba(255,255,255, 0.7); 
+        color: #f1f1f1; 
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        padding: 2px;
+        text-align: center;
+    }
+
+    .container:hover .overlay {
+        opacity: 1;
+    }
+
+    /* image scroll gallery */ 
+    div.scroll-container {
+        background-color: rgba(199, 196, 196, 0.5);
+        overflow: auto;
+        white-space: nowrap;
+        padding: 10px;
+    }
+
+    div.scroll-container img {
+        padding: 10px;
+    }   
+
+    /*-- div classes -- */ 
+
+    .sub-header{ 
+        text-align: center;
+        color: rgb(31, 25, 23);
+        line-height: 1.5rem;
+        /*background-color: */
+        /*border: 1px solid black;*/
+        font-family: Catamaran;
+    }
+
+    /*-- navigation bar --*/ 
+        .header-bar{ 
+            overflow: hidden;
+            display: flex; 
+            align-items: center; 
+            background-color: rgba(255,255,255,0.8);
+
+        }
+
+        .navigation-container{ 
+            background-color: rgb(white);
+        }
+
+        .header-text{ 
+            width: 60%; 
+            color: rgb(81, 43, 2);
+            font-size: 4em; 
+            font-family: Outfit;
+            float:right; 
+        }
+
+        .nav{ 
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            /*text-align: right;*/
+        }
+
+        .nav li{ 
+            display: inline;
+        }
+
+        .nav li a{ 
+            padding: 1em;
+            display: inline-block;
+            /*border: 3px solid rgb(231, 70, 70);*/
+            font-size: 2em; 
+            font-family: Catamaran;
+        }
+
+        /*--Stick Nav--*/ 
+
+            .content {
+            padding: 16px;
+            }
+
+            .sticky {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            }
+
+            .sticky + .content {
+            padding-top: 60px;
+            }
+
+
+        /* --- psuedo classes --- */ 
+        a:link{ 
+            text-decoration: none;
+        }
+        a:visited{ 
+            color: rgb(89, 18, 18); 
+        }
+        a:hover{ 
+            background-color: rgba(214, 128, 128,0.5);
+        }
+
+
+</style>
+</head>
+
+<body> 
+    <div class="header-bar" id="header-bar"> 
+        <div class="header-text"> Japan Blog </div>
+    <!-- navigation -->
+        <div class="navigation-container">  
+            <ul class="nav"> 
+                <li> <a href="#Tokyo" href="javascript:void(0)"> Tokyo </a></li>
+                <li> <a href="#Osaka" href="javascript:void(0)"> Osaka </a></li>
+                <li> <a href="#Kyoto" href="javascript:void(0)"> Kyoto </a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- header block -->
+    <div class="main-box"> 
+    <h1> 日本 </h1>
+
+
+    <div class="sub-header"> 
+        <h4> Japan is home to strikingly diverse landscapes, historic shines and some of the largest, cherry blossom-lined, cities.</h4>
+    </div>
+
+<!-- <p><a href="#IG">Click here to jump to the image gallery</a></p> --> 
+
+    <br>
+<!-- tokyo section -->
+
+    <div class="two-colum-box">
+        <h3 id="Tokyo"> Tokyo </h3>
+        
+            <div class="col-2">
+                <div class="container"> 
+                    <img class="img-responsive" src="images/one_one_placeholder.png" alt="Tokyo_temple"> 
+                    <div class="overlay"> <p> Taito ward </p> </div>
+                </div>
+                <p> Taito is the home to Tokyo's oldest temple. 
+                    Completed in 645, the Buddiest temple, Sensoji, 
+                    is one of Tokyo's most colourful and popular temples. 
+                    Legend has it that in 628 AD, fishermen found a statue of Kannon 
+                    in the Sumida River, and Sensoji Temple was built to enshrine it. 
+                    Throughout its long history, the Main Hall has been destroyed countless 
+                    times and rebuilt from the donations of people from all over Japan. 
+                    Within the Main Hall, the statue of Kannon is enshrined, and visitors 
+                    can pay their respects to the benevolent Kannon before touring the rest of 
+                    the grounds.</p>
+            </div>
+
+            <div class="col-2"> 
+                <div class="container"> 
+                    <img class="img-responsive" src="images/one_one_placeholder.png" alt="Tokyo_taito_shops">
+                    <div class="overlay"> <p> Nakamise </p></div>
+                </div> 
+                <p> A shopping street of over 200 metres, called Nakamise, leads from the 
+                    outer gate to the temple's second gate, the Hozomon. This street is 
+                    actually on temple property and so it starts and ends with a temple 
+                    gate: at the southern end is the outer gate of Kaminarimon, and at the
+                     northern end is the inner gate of Hozomon. Between these two gates are 89 
+                     shops, with 54 shops on the east side, and 35 shops on the west. “Nakamise” 
+                     is a traditional name given to shopping streets on the grounds of temples 
+                     or shrines, so this is not the only “Nakamise” in Japan, but it is one 
+                     of the oldest and most famous. </p>
+            </div>
+    </div>
+
+    <br>
+
+<!-- osaka section -->
+
+    <div class="two-colum-box">   
+    <div class="col-2"> 
+        <h3 id="Osaka"> Osaka </h3>
+        <p> The Glico running man is one of the most well known landmarks in Osaka. 
+            The running man advertises Glico, the manufacturer of one of Asia’s most famous 
+            confectionery companies. Glico’s most popular product is Pocky, which is the confectionery 
+            coated pretzel sticks which are very popular in Japan and abroad. Dating back to 1935, the sign 
+            has had several overhauls and been altered to celebrate various sporting triumphs through the years. </p>
+     </div>
+
+     <div class="col-2">
+        <div class="container"> 
+            <img class="img-responsive" src="images/one_one_placeholder.png" alt="running man bilboard">
+            <div class="overlay"> <p> The Glico Running Man </p></div> 
+        </div> 
+    </div>
+
+    </div>
+    <div class="two-colum-box">
+        <div class="col-2"> 
+            <div class="container"> 
+                <img class="img-responsive" src="images/one_one_placeholder.png" alt="Osaka River">
+                <div class="overlay"> <p> Dontonbori Area </p></div>
+            </div> 
+         </div>
+    
+         <div class="col-2">
+            <p> Osaka has a great night life, here I visted the Dontonbori Area. The most famous area in Osaka is undoubtedly Dotonbori. 
+                A restaurant and bar district situated alongside the Dotonbori River, 
+                this spot is a must-see when checking out the Osaka nightlife. </p>
+        </div>
+    
+        </div>
+
+<!-- kyoto section -->
+
+    <h3 id="Kyoto"> Kyoto</h3>
+        <img src="images/one_one_placeholder.png" alt="Katsura_river"> 
+        <p> In Kyoto, I visted the beautiful Katsura River </p>
+        <p> The Katsura River runs through the Arashiyama district on the 
+            western part of Kyoto. The Katsura River area features some of the oldest 
+            shrines in Kyoto. The Hozu and Oi river are the origin of the Katsura River. A boat 
+            ride is the perfect way to explore this wonderful area. The boatmen using long bamboo poles for the 
+            steering. The whole setting feels like being transfered back in time. During the cherry 
+            blossom season in spring and the autumn leaves season the scenery is especially beautiful. 
+            The river joins later after many kilometers the Uji and Kamo rivers. </p>
+  
+
+    <h3 id="IG"> Image Gallery </h3>
+    <div class="scroll-container"> 
+        <img src="images/one_one_placeholder.png" alt="Katsura_river" width="300" height="300"> 
+        <img src="images/one_one_placeholder.png" alt="Osaka River" width="300" height="300">
+        <img src="images/one_one_placeholder.png" alt="running man bilboard" width="300" height="300">
+        <img src="images/one_one_placeholder.png" alt="Tokyo_taito_shops" width="300" height="300">
+        <img src="images/one_one_placeholder.png" alt="Tokyo_temple" width="300" height="300"> 
+    </div>
+</div>
+
+</div>
+    <br>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("header-bar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+        </script>
+        
+
+<footer>&copy; Vanessa Ardern</footer>
+</body>    
+
+</html>

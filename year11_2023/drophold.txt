@@ -1,0 +1,47 @@
+ /* hidden  menu items*/
+
+      .drop-nav{
+          position: absolute;
+          display: none;
+          width: 100%;
+          border: 0px solid pink;
+          box-sizing: border-box;
+      }
+      .inner-nav li a{
+        /* size the drop down elements nicely */
+        width:100%;
+        box-sizing: border-box;
+      }
+      
+/* make visible and set background colour */
+      .drop-cover:hover .drop-nav{
+        display: block;
+        background-color: crimson;
+
+      }
+
+
+
+
+
+             /* hidden  menu items*/
+
+       .drop-nav{
+          position: absolute;
+          display: none;
+          width: 100%;
+          border: 0px solid pink;
+          box-sizing: border-box;
+      }
+      .inner-nav li a{
+        /* size the drop down elements nicely */
+        width:100%;
+        box-sizing: border-box;
+      }
+
+      /* make visible and set background colour */
+      .drop-cover:hover .drop-nav{
+        display: block;
+        background-color: crimson;
+
+      }

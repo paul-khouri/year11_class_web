@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,200&display=swap');
+
+body {
+background-color:rgb(170, 214, 246);
+color:white;
+font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+color:white;
+}
+    
+h1 span {
+border: 3px solid rgb(37,113,166);
+background-color: rgb(187, 227, 255);
+padding: 1rem 1rem 1rem 1rem;
+}
+
+h2 {
+background-color: rgb(187, 227, 255);
+color:white;
+text-align: center;
+padding: 1rem 0 1rem 0;
+border: 3px solid rgb(37,113,166);
+}
+
+h3 {
+background-color: rgb(187, 227, 255);
+color:white;
+text-align: center;
+padding: 1rem 0 1rem 0;
+border: 3px solid rgb(37,113,166);
+scroll-margin-top: 2.5em;
+}
+
+.sub-header {
+margin: 0.5rem;
+color:white;
+text-align: center;
+font-weight: 275;
+font-size: 1rem ;
+}
+/* --------------------------  */
+.block{
+position: relative;
+}
+
+.title{
+position: absolute;
+top: 50%;
+transform: translate(0,-100%);
+width: 100%;
+color: rgb(255, 255, 255);
+box-sizing: border-box;
+}
+
+.caption{
+position: absolute;
+top: 100%;
+/* changed to -100% */
+transform: translate(0,-100%);
+box-sizing: border-box;
+width: 100%;
+text-align: center;
+font-style: italic;
+background-color: rgba(255, 255, 255, 0.4);
+color: rgb(2, 43, 56);
+padding-top: 0.25em;
+padding-bottom: 0.25em;
+margin-top: 0;
+font-size: 1em;
+}
+/* --------------------------  */
+
+.img-responsive{
+max-width: 100%;
+display: block;
+}
+
+
+#navbar a {
+float: left;
+display:block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+#navbar a:hover {
+background-color:rgb(122, 189, 236);
+color:white;
+}
+
+#navbar a:active {
+background-color:rgb(37,113,166);
+color: white;
+}
+
+.nav li a{ 
+padding: 1.5em;
+display: inline-block;
+border: 2px solid rgb(37,113,166);
+font-size: 1.5rem;
+}
+
+#navbar {
+background-color: rgb(98, 160, 203);
+text-align: center; 
+position: center;
+/* needed this */
+overflow: auto;
+}
+
+.sticky {
+position: -webkit-sticky;
+position: sticky;
+top: 0;
+width: 100%;
+padding: 0px;
+z-index: 1;
+}
+
+.wrapper {
+max-width: 700px;
+margin: auto;
+}
+
+.content {
+padding: 16px;
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper"> 
+    <h2 id="home"> Skiing around the world </h3>
+    <div id="navbar" class="sticky">
+        <a href="#home"> Home </a>
+        <a href="#jap"> Japan </a>
+        <a href="#ame"> America </a>
+        <a href="#can"> Canada </a>
+        <a href="#new"> New Zealand </a>
+    </div>
+
+    <br>
+    <div class="sub-header">
+    <br>
+    <p> There are so many options for skiing, each place has its own unique features. 
+    It can be hard to choose where to go when you want to experience the best powder or the most beautiful views. 
+    Deep dive into this imformative website and you will find it easy to choose your next skiing destination.</p>
+    </div>
+
+
+    <div class="content">
+        <h3 id="jap"> Japan </h3>
+        <h4> Nagano:</h4>
+        <p> Next to Happo-One, these two interconnected resorts are suitable for the whole family, 
+        and accessible with the same lift ticket. 70% of the Hakuba 47 and 65% of the Goryu runs are appropriate f
+        or beginners or intermediates. For advanced skiers, Goryu has 3 black trails but backcountry skiing is prohibited. Hakuba 47, 
+        on the other hand, allows backcountry skiing after registering for the Double Black Diamond Club. 
+        The Hakuba 47 and Goryu resorts are adjacent to Goryu Village and Echoland Villagex.</p>
+        <h4> Insider tip: </h4>
+        <p> Those who want to ski off-piste and through the trees at Hakuba 47 should sign up to the Double Black Diamond Club on arrival. 
+        While it doesn’t cost anything, you receive a bib that permits you to ski off-piste zones prohibited for other skiers. 
+        On powder day this is some of the best tree skiing in the valley.</p>
+
+        <div class="block">   
+        <div class="caption">Snow covered house Nagano</div>  
+        <img class="img-responsive" src="images/sixteen_nine_placeholder.png" alt="Snow covered house in Japan">
+        </div>
+
+        <h3 id="ame"> America </h3>
+        <h4> Colorado: </h4>
+        <p>Located only 90 miles west of Denver International Airport, Copper Mountain is a conveniently located resort known for almost 2,500 acres of naturally divided terrain. While many resorts try to create distinct sections for each level of skier, Copper truly accomplishes this with a wide variety of runs within each section. Copper also offers a unique experience for expert skiers with free cat skiing on Tucker Mountain.</p>
+        <br>
+        <p>Copper Mountain is at 9,712 feet with a resort summit elevation of 12,312 feet, it is an excellent family destination with youth and adult seasonal ski and ride school programs that up the ante on progression, plenty of mellow groomers and a wide array of activities besides skiing and snowboarding, including zip lines, tubing, snowshoeing, ice skating and more.</p>
+        <br>
+        <p>What would the perfect mountain town be without its mountain? Boasting 5 peaks, 2,908 skiable acres, 187 trails, four terrain parks and the tallest chairlift in North America, Breckenridge Ski Resort offers unforgettable skiing and riding for all ability levels. Considered by many to be one of the best ski resorts in Colorado, Breckenridge combines unique character with unmatched terrain and impeccable service to stand out from the rest. </p>
+        <div class="block">   
+        <div class="caption">Lift in Colorado</div>  
+        <img class="img-responsive" src="images/sixteen_nine_placeholder.png" alt="Descending Lift America">
+        </div>
+
+        <h3 id="can"> Canada </h3>
+        <h4> Whistler: </h4>
+        <p> The power of the landscape, the towering mountains, the crisp air and glinting snow cast the trivial aside and draw your focus to what’s truly important. It’s a force of nature: something real. It manifests itself in the undeniable reputation, the legendary terrain, the reliably deep snow and the world record-breaking gondola. We’re all drawn here for different reasons. Some are attracted to a mountain town with an undisputed atmosphere. Others are pulled in by the pedestrian village with ski-in/ski-out lodging. Many seek outdoor adventures that range from just-enough to over-the-top. Then there’s the world-famous après, five star dining, spas, shopping, or nightlife that are hard for anyone to resist. And at the centre of it all, the two largest, consistently top ranked, side-by-side ski mountains, a place with limitless possibilities.</p>
+        <div class="block">   
+        <div class="caption">Soft powdery snow Whistler</div>  
+        <img class="img-responsive" src="images/sixteen_nine_placeholder.png" alt="Soft Snow Whistler">
+        </div>
+            
+        <h3 id="new"> New Zealand </h3>
+        <h4> Wanaka: </h4>
+        <p>In winter, Cardrona Alpine Resort is New Zealand's most popular ski area, attracting all kinds of snow enthusiasts - from beginners & families, to Olympic & X Games athletes. Cardrona’s 3 vast basins are home to the Southern Hemisphere’s most extensive terrain parks & pipes, & NZ’s most qualified ski & snowboard school. Wide, open trails offer some of NZ’s best snow conditions, groomed to perfection by a modern & innovative snow management system.</p>
+        <p>Treble Cone, the largest ski area in NZ's South Island, is famous for its long, uncrowded groomed runs, legendary off-piste terrain and unrivalled views over Lake Wanaka and the Southern Alps. For beginner skiers and snowboarders, Treble Cone's learner area is located alongside the comforts of the Base lodge and café with the convenience of a fully kitted ski and snowboard rental shop. Intermediates will revel Treble Cone’s massive 700m of vertical, the longest in the Queenstown Southern Lakes District which allows for some of New Zealand’s longest groomed trails and of course, Treble Cone’s famous off-piste terrain. Advanced and expert riders will find a playground of open powder faces and natural half pipes in the Saddle Basin and on the Summit Slopes and the Motatapu Chutes offer some of the steepest and most challenging terrain within the boundaries of a patrolled and protected ski area. No matter what type of skier or snowboarder you are, Treble Cone offers an unforgettable New Zealand snow experience.</p>  
+        <div class="block"> 
+        <div class="caption">Beautiful view from mountain in Wanaka</div>  
+        <img class="img-responsive" src="images/sixteen_nine_placeholder.png" alt="Soft Snow Whistler">
+        </div>
+    </div> 
+</div>
+
+</body>
+</html>

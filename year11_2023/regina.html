@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <title>RESTAURANTS TO VISIT IN AUCKLAND</title>
+
+
+
+     <style>
+       @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Patrick+Hand+SC&display=swap');
+
+
+       *{
+         scroll-behavior: smooth;
+       }
+        body{
+            font-family: 'Libre Baskerville', serif;
+            font-size: 100%;
+            background-color: rgb(73, 73, 73);
+        }
+        
+        h1{
+            font-family: 'Marcellus SC', serif;
+            font-size: 5rem;
+            color: rgb(249, 156, 171);
+            text-align: center;
+        }
+        h2{
+         color: rgb(252, 230, 230);
+         background-image: url(images/);
+        }
+        h3{
+         color: rgb(206, 190, 190);
+        }
+        
+        p{
+         color: rgb(213, 213, 213)
+        }
+        .wrapper{
+         max-width: 900px;
+         border: 2px solid rgb(0, 0, 0);
+         background-color: rgb(147, 147, 147);
+         margin: auto;
+         padding: 5em;
+        }
+        .img-responsive{
+         max-width: 100%;
+        }
+
+
+/*-- columns --*/
+   /*-- photos of food --*/
+        .row{
+         border: 0px solid green;
+         overflow: auto;
+        }
+         .col{
+            width: 33.333%;
+            box-sizing: border-box;
+            float: left;
+            padding: 0 0.25em;
+         }
+
+/* ---- navigation ----- */
+ul{
+   list-style: none;
+          padding:0;
+          margin:0;
+
+}
+        .nav{
+   
+            background-color: rgb(230, 175, 175);
+            text-align: center;
+            width:100%;
+        }
+        .nav > li{
+            display: inline-block; 
+            position:relative;   
+            box-sizing: border-box; 
+        }
+
+        .nav > li a{
+            padding: 1em;
+            display: inline-block;
+            color: rgb(213, 213, 213);
+            border: 2px solid rgb(255, 255, 255); 
+        }
+
+   
+
+        .nav li a:hover{
+            background-color: rgb(192, 47, 132);
+            color:rgb(244,255,255);
+        }
+
+        .cover{ 
+         border: 0px solid red;
+         box-sizing: border-box;
+
+        }
+
+        .drop{
+         position: absolute;
+          display: block;
+          width: 100%;
+          border: 0px solid green;
+          box-sizing: border-box;
+      
+        }
+
+        .inner-nav li a{
+        /* size the drop down elements nicely */
+        width:100%;
+        box-sizing: border-box;
+      }
+
+      .inner-nav li{
+         background-color: pink;
+      }
+
+
+
+
+     </style>
+   </head>
+   <body>
+      <h1>AUCKLAND EATS</h1>
+      
+      <div class="wrapper">
+
+      <!--navigation-->
+         <ul class="nav">
+            <li><a href="#"> Home </a></li>
+            <li><a href="#bakery"> Bakery </a></li>
+            <li>
+               <div>
+               <a href="#dessert"> Dessert </a>
+            </div>
+            </li>
+            <li>
+               <div class="cover">
+                  <a href="#restaurants"> Restaurants </a>
+               <div class="drop">
+                  <ul class="inner-nav">
+                  <li> <a href="#">Origine </a></li>
+                  <li><a href="#">Jang Teo</a></li>
+                  <li><a href="#">Cocoro</a></li>
+                  <li><a href="#">Ten-Hana</a></li>
+                  <li><a href="#">Su & Zhe</a></li>
+                  <li><a href="#">Mr Lobster Private Kitchen</a></li>
+                  </ul>
+               </div>
+            </div>
+            </li>
+            <li><a href="#dessert"> Last </a></li>
+       </ul>
+
+
+      <!--section title one-->
+         <h2> RESTAURANTS </h2>
+            <p> Auckland is filled with delightful, stunning restaurants that are perfect for your friends and family. Here are just a few for you to try out! </p>
+
+
+
+      <!--french food-->
+         <div class="all-dishes">
+            <h3> 1. ORIGINE </h3>
+               <p> A perfect pairing new restaurant, Origine combines classic French cuisine with modern Kiwi approach. Origine is a modern French restaurant with a relaxed New Zealand atmosphere, an intersection of classical French cuisine. </p>
+                  <div class="row">
+                     <div class="col"><img class="img-responsive" src="images/slow_cooked_lamb_with_pastry.jpg" alt="Slow cooked meat with pickles and gherkins on the side on a white plate."></div>
+                     <div class="col"><img class="img-responsive" src="images/duck_liver_parfit.jpg" alt="An orange leaf ontop of a light brown moose which is sitting on a bready biscuit."></div>
+                     <div class="col"><img class="img-responsive" src="images/slow_cooked_octopus.jpg" alt="Chewy slow cooked octopus with capers and parsley covered in a thin sauce."></div>
+                  </div>
+         </div> 
+
+
+      <!--korean food-->
+         <div class="all-dishes">
+            <h3> 2. JANG TEO </h3>
+               <p> Jang Teo is a authentic Korean cuisine restuarant that is located in Korea town in Wairau Valley in Auckland. It's a lovely place to eat if you're looking for simple, soothing comfort food but also want to try out some new dishes. </p>
+                  <div class="row">
+                     <div class="col"><img class="img-responsive" src="images/white_soup.jpg" alt="A hot white-ish soup with some spring onions on the top."></div>
+                        <div class="col"><img class="img-responsive" src="images/white_soup_with_noodles.jpg" alt="A hot white soup with some meet."></div>
+                        <div class="col"><img class="img-responsive" src="images/sundae.jpg" alt="A blood sausage."></div>
+                     </div>
+         </div>
+
+      <!--japanese food-->
+         <div class="all-dishes">
+            <h3> 3. COCORO</h3>
+               <p> Cocoro is a modern Japanese restaurant which is located in Ponsonby, Auckland. Cocoro offers small plates & set-course menus of a varity of fancy Japanese cuisine starting from fesh fish to lovely soothing udon. </p>
+                  <div class="row">
+                     <div class="col"><img class="img-responsive" src="images/fried_lotus_root.jpg" alt="Crispy thin fried lotus."></div>
+                     <div class="col"><img class="img-responsive" src="images/sashimi.jpg" alt="A plate full of raw fish."></div>
+                     <div class="col"><img class="img-responsive" src="images/Sushi.jpg" alt="An assortment of raw fish on top of some rice."></div>
+                  </div>
+         </div>
+
+      <!--japanese food-->
+         <div class="all-dishes">
+            <h3>5. TEN-HANA</h3>      
+               <p>Ten-Hana is a casual Japanese restuarant that specialises in Tempura bowls. It is located in Crowne Plaza Auckland. They serve a decent amount of food for the price you pay for which is also a bonus. Great for University students who have no idea for to go and don't want to spend massive amounts of many on food. The location of it is also perfect as it is very close to the Auckland CBD.</p>
+                  <div class="row">
+                     <div class="col"><img class="img-responsive" src="images/curry_tempura.jpg" alt="a bowl of fried shrip covered in curry sauce"></div>
+                     <div class="col"><img class="img-responsive" src="images/tempura.jpg" alt="a plater of fried veggies and shrip with some rice and meat"></div>
+                  </div>
+         </div>
+
+
+      <!--sub section five-->
+         <div class="all-dishes">
+            <h3>4. SU & ZHE</h3>
+               <p>Su & Zhe is a authentic chinese restaurant which is located on Dominion Road, Mount Eden, Auckland. It serves amazing dencent portions of food for a reasonable price. Su & Zhe serves amazing genuine chinese food that is very close to what you would have in China. It's a lovely, comforting restuarant for which it is great to go with fammily and friends.</p>
+                  <div class="row">
+                     <div class="col"><img class="img-responsive" src="images/beef_ball.jpg" alt="4 round beef balls sitting in a pool of sauce, with some greens on the side"></div>
+                     <div class="col"><img class="img-responsive" src="images/fried_spring_rolls.jpg" alt="4 fried spring rolls."></div>
+                     <div class="col"><img class="img-responsive" src="images/shanghai_dumplings.jpg" alt="8 fresh steaming shanghai dumplings."></div>
+                  </div>
+         </div>
+
+
+      <!--sub section six-->
+         <div class="all-dishes">
+            <h3>5. Mr Lobster Private Kitchen</h3>
+               <p>Mr Lobster Private Kitchen is a modern twist on Chinese Yum Cha. It's a lovely place for a family gathering. It is located on Lincon Road, Henderson, Auckland. Great staff members who a friendly and accomodating.</p>
+                  <div class="row">
+                     <div class="col"><img class="img-responsive" src="images/chicken_feet.jpg" alt=""></div>
+                     <div class="col"><img class="img-responsive" src="images/potato_and_beef.jpg" alt=""></div>
+                     <div class="col"><img class="img-responsive" src="images/Egg_tart.jpg" alt=""></div>
+                  </div>
+         </div>
+
+
+      <!--section title two-->
+         <h2 id="bakery"> BAKERY </h2>
+            <p>The streets of Auckland are quickly being filled with the delightful smells of fresh pastries. Here are a few bakeries in Auckland you should try out the next time your're there!</p>
+
+      
+      <!--sub section seven-->
+         <h3>1. WHEATZ BAKERY</h3>
+            <p></p>
+
+      
+      <!--sub section eight-->
+         <h3>2. LA CROURONNE CAKE BOUTIQUE</h3>
+            <p></p>
+
+   
+   
+   <!--section title three-->
+      <h2>DESSERTS</h2>
+         <p>If you're ever on the streets of Auckland craving for something sweets you are in the perfect place. Auckland is filled with amazing dessert places that will satisfy your needs of something sweet.</p>
+
+
+   <!--sub section nine-->
+      <div class="all-dishes">
+         <h3>1. MÖVENPICK</h3>
+            <p>Mövenpick Ice Cream is a brand of ice cream of Swiss origin produced by Nestlé, and now is the new company called Froneri since 2016 in joint-venture with Nestlé and R&R Ice Cream.</p>
+               <div class="row">   
+                  <div class="col"><img class="img-responsive" src="images/ice-cream_in_a_cup.jpg" alt="ice-cream in a cup."></div>
+                  <div class="col"><img class="img-responsive" src="images/movenpick_cake.jpg" alt="a slice of cake from Mövenpick."></div>
+                  <div class="col"><img class="img-responsive" src="images/movenpick_ice-cream.jpg" alt="a varity of ice-cream flavors."></div>
+               </div>
+      </div> 
+
+
+
+   <!--sub section ten-->
+      <div class="all-dishes">
+         <h3>2. BLUEBELLS</h3>
+            <p>Bringing sweetness and joy to your celebrations! Our bakery is passionate about creating delicious, handcrafted cakes, cupcakes, and other baked goods that look as good as they taste.We believe that every occasion is special, and our mission is to make it even more memorable with our sweet treats.</p>
+               <div class="row"> 
+                  <div class="col"><img class="img-responsive" src="images/bluebells_cupcakes_1.jpg" alt="A case full of cupcakes and macarons from bluebells."></div>
+                  <div class="col"><img class="img-responsive" src="images/bluebells_cupcakes_2.jpg" alt="A case full of cupcakes from bluebells."></div>
+                  <div class="col"><img class="img-responsive" src="images/Logo_of_Bluebells.jpg" alt="The logo of Bluebells."></div>
+               </div>
+      </div>
+
+
+   <!--sub section eleven-->
+      <div class="all-dishes">
+         <h3>3. KRISPY KREME</h3>
+            <p>Krispy Kreme is best known for fresh, glazed, yeast-raised doughnuts, especially the "Krispy Kreme Original Glazed," its first and best-known doughnut. All of its doughnuts are made from a secret recipe that has been in the company since 1937.</p>
+               <div class="row">   
+                  <div class="col"><img class="img-responsive" src="images/krispy_kreme.jpg" alt="The logo of Krispy Kreme"></div>
+                  <div class="col"><img class="img-responsive" src="images/a_case_of_krispy_kreme_doughnuts.jpg" alt="A case full of Krispy Kreme doughnuts."></div>
+               </div>
+      </div>   
+   
+
+<!--sub section twelve-->
+<div class="all-dishes">
+   <h3>4. DUNKIN' DOUGHNUTS</h3>
+      <p>Dunkin' Donuts is recognized for their amazing selection of incredibly tasting donuts. Their website lists over 50 possible donut flavours, and they always have seasonal specials, so you can bet they'll have exactly what you're craving for.</p>
+   <div class="row">   
+      <div class="col"><img class="img-responsive" src="images/dunkin'.jpg" alt="A logo of Dunkin' doughnuts on Queens street."></div>
+      <div class="col"><img class="img-responsive" src="images/dunkin' dounuts.jpg" alt="A logo of Dunkin' doughnuts on Queens street."></div>
+      <div class="col"><img class="img-responsive" src="images/dunkin_dounut_.jpg" alt="A logo of Dunkin' doughnuts on Queens street."></div>
+   </div>
+</div>
+
+
+   </div>
+</body>
+</html>
